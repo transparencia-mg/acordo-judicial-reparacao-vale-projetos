@@ -1,0 +1,85 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "",
+      "path": "data/projetos-acordo-judicial-vale.csv.gz",
+      "profile": "tabular-data-resource",
+      "schema": "schema.json",
+      "title": "Projetos do Acordo Judicial da Vale",
+      "mediatype": "text/csv",
+      "encoding": "windows-1252",
+      "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho",
+      "dialect": "dialect.json",
+      "format": "csv",
+      "schema": {
+        "fields": [
+           {
+            "name": "numero_sequencial_siafi",
+            "title": "Nº SIAFI/MG",
+            "type": "integer",
+            "format": "default",
+            "description": "Número de registro do plano de trabalho no Sistema de Administração Financeira e Orçamentária - SIAFI/MG",
+            "bareNumber": true,
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "anexo_acordo",
+            "title": "Anexo",
+            "type": "integer",
+            "format": "default",
+            "description": "Indicação de qual anexo pertence o plano de trabalho",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "plano_trabalho",
+            "title": "Ob",
+            "type": "string",
+            "format": "default",
+            "description": "Descrição do objeto do Plano de Trabalho",
+            "constraints": {
+              "required": true,
+            }
+          },
+          {
+            "name": "unidade_orcamentaria_codigo",
+            "title": "Unidade Orçamentária - Código",
+            "type": "string",
+            "format": "default",
+            "description": "Código da Unidade Orçamentária",
+            "bareNumber": true,
+            "constraints": {
+            "required": true,
+            }
+          },
+          {
+             "name": "unidade_orcamentaria_descricao",
+             "title": "Unidade Orçamentária - Descrição",
+             "type": "string",
+             "format": "default",
+             "description": "Nome completo da Unidade Orçamentária",
+             "constraints": {
+             "required": true
+            }
+          },
+          {
+             "name": "valor_total_convenio",
+             "title": "Valor Total do Convênio",
+             "type": "string",
+             "format": "default",
+             "description": "Valor destinado ao projeto com as devidas correções por meio da aplicação do IPCA",
+             "constraints": {
+             "required": true
+             }
+                },
+               ],
+  "keywords": [
+    "Acordo Judicial"
+  ],
+  "version": "0.1.0",
+  "title": "Acordo Judicial da Vale, Anexos do Acordo, Projetos do Acordo, Valor Total do Acordo,",
+}
