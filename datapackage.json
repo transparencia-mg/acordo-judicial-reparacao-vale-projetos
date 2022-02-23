@@ -2,84 +2,68 @@
   "profile": "tabular-data-package",
   "resources": [
     {
-      "name": "",
-      "path": "data/projetos-acordo-judicial-vale.csv.gz",
+      "name": "projetos-acordo-judicial-vale",
+      "path": "data/projetos-acordo-judicial-vale.csv",
       "profile": "tabular-data-resource",
-      "schema": "schema.json",
-      "title": "Projetos do Acordo Judicial da Vale",
-      "mediatype": "text/csv",
-      "encoding": "windows-1252",
-      "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho",
-      "dialect": "dialect.json",
-      "format": "csv",
       "schema": {
         "fields": [
-           {
-            "name": "numero_sequencial_siafi",
-            "title": "Nº SIAFI/MG",
-            "type": "integer",
+          {
+            "name": "numero_siafi",
+            "type": "number",
             "format": "default",
-            "description": "Número de registro do plano de trabalho no Sistema de Administração Financeira e Orçamentária - SIAFI/MG",
-            "bareNumber": true,
-            "constraints": {
-              "required": true
-            }
+            "title": "Código SIAFI",
+            "description": "Código do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais )"
           },
           {
-            "name": "anexo_acordo",
+            "name": "anexo",
+            "type": "number",
+            "format": "default",
             "title": "Anexo",
-            "type": "integer",
-            "format": "default",
-            "description": "Indicação de qual anexo pertence o plano de trabalho",
-            "constraints": {
-              "required": true
-            }
+            "description": "Anexo ao qual o Projeto se refere conforme o Acordo de Reparação."
           },
           {
-            "name": "plano_trabalho",
-            "title": "Ob",
+            "name": "projeto",
             "type": "string",
             "format": "default",
-            "description": "Descrição do objeto do Plano de Trabalho",
-            "constraints": {
-              "required": true,
-            }
+            "title": "Projeto",
+            "description": "Descrição do Projeto conforme consta no Acordo de Reparação e de execução do Governo do Estado"
           },
           {
-            "name": "unidade_orcamentaria_codigo",
-            "title": "Unidade Orçamentária - Código",
+            "name": "codigo-orgão",
             "type": "string",
             "format": "default",
-            "description": "Código da Unidade Orçamentária",
-            "bareNumber": true,
-            "constraints": {
-            "required": true,
-            }
+            "title": "Código Órgão",
+            "description": "Código da Unidade Orçamentária responsável pelo Projeto"
           },
           {
-             "name": "unidade_orcamentaria_descricao",
-             "title": "Unidade Orçamentária - Descrição",
-             "type": "string",
-             "format": "default",
-             "description": "Nome completo da Unidade Orçamentária",
-             "constraints": {
-             "required": true
-            }
+            "name": "orgao",
+            "type": "string",
+            "format": "default",
+            "description": "Descrição da Unidade Orçamentária responsável pelo Projeto",
+            "title": "Órgão"
           },
           {
-             "name": "valor_total_convenio",
-             "title": "Valor Total do Convênio",
-             "type": "string",
-             "format": "default",
-             "description": "Valor destinado ao projeto com as devidas correções por meio da aplicação do IPCA",
-             "constraints": {
-             "required": true
-             }
-                },
-               ],
-  "keywords": [
-    "Acordo Judicial"
+            "name": "valor_total_projeto",
+            "type": "string",
+            "format": "default",
+            "description": "Valor destinado ao projeto com as devidas correções por meio da aplicação do IPCA",
+            "title": "Valor Total do Projeto"
+          }
+        ]
+      },
+      "title": "Projetos Acordo Judicial da Vale",
+      "format": "csv",
+      "encoding": "UTF-8",
+      "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho"
+    }
   ],
-  "version": "0.1.0",
-  "title": "Acordo Judicial da Vale, Anexos do Acordo, Projetos do Acordo, Valor Total do Acordo,",
+  "name": "projetos-acordo-judicial-vale",
+  "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho",
+  "title": "Projetos Acordo Judicial da Vale",
+  "contributors": [
+    {
+      "title": "Comitê Brumadinho",
+      "role": "author"
+    }
+  ]
 }
