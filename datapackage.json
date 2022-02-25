@@ -8,7 +8,7 @@
       "schema": {
         "fields": [
           {
-            "name": "numero_siafi",
+            "name": "codigo_siafi",
             "type": "number",
             "format": "default",
             "title": "Código SIAFI",
@@ -16,20 +16,13 @@
           },
           {
             "name": "anexo",
-            "type": "number",
+            "type": "string",
             "format": "default",
             "title": "Anexo",
             "description": "Anexo ao qual o Projeto se refere conforme o Acordo de Reparação."
           },
           {
-            "name": "projeto",
-            "type": "string",
-            "format": "default",
-            "title": "Projeto",
-            "description": "Descrição do Projeto conforme consta no Acordo de Reparação e de execução do Governo do Estado"
-          },
-          {
-            "name": "codigo-orgão",
+            "name": "codigo_orgao",
             "type": "string",
             "format": "default",
             "title": "Código Órgão",
@@ -43,8 +36,15 @@
             "title": "Órgão"
           },
           {
-            "name": "valor_total_projeto",
+            "name": "projeto",
             "type": "string",
+            "format": "default",
+            "title": "Projeto",
+            "description": "Descrição do Projeto conforme consta no Acordo de Reparação e de execução do Governo do Estado"
+          },
+          {
+            "name": "valor_total_projeto",
+            "type": "number",
             "format": "default",
             "description": "Valor destinado ao projeto com as devidas correções por meio da aplicação do IPCA",
             "title": "Valor Total do Projeto"
