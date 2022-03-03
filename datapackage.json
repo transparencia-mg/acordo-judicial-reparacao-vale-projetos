@@ -2,8 +2,8 @@
   "profile": "tabular-data-package",
   "resources": [
     {
-      "name": "projetos-acordo-judicial-vale",
-      "path": "data/projetos-acordo-judicial-vale.csv",
+      "name": "projetos-acordo-judicial-reparacao-vale",
+      "path": "data/projetos-acordo-judicial-reparacao-vale.xlsx",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
@@ -51,15 +51,15 @@
           }
         ]
       },
-      "title": "Projetos Acordo Judicial da Vale",
+      "title": "Projetos Acordo Judicial de Reparação da Vale",
       "format": "csv",
       "encoding": "UTF-8",
       "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho"
     }
   ],
-  "name": "projetos-acordo-judicial-vale",
+  "name": "projetos-acordo-judicial-reparacao-vale",
   "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho",
-  "title": "Projetos Acordo Judicial da Vale",
+  "title": "Projetos Acordo Judicial de Reparação da Vale",
   "contributors": [
     {
       "title": "Comitê Brumadinho",
