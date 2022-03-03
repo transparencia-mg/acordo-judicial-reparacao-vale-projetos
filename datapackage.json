@@ -3,7 +3,7 @@
   "resources": [
     {
       "name": "projetos-acordo-judicial-reparacao-vale",
-      "path": "data/projetos-acordo-judicial-reparacao-vale.xlsx",
+      "path": "data/projetos_acordo_judicial_reparacao_vale.xlsx",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
