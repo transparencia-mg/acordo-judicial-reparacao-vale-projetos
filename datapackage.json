@@ -23,7 +23,7 @@
           },
           {
             "name": "codigo_orgao",
-            "type": "string",
+            "type": "number",
             "format": "default",
             "title": "Código Órgão",
             "description": "Código da Unidade Orçamentária responsável pelo Projeto"
@@ -52,7 +52,7 @@
         ]
       },
       "title": "Projetos Acordo Judicial de Reparação da Vale",
-      "format": "csv",
+      "format": "xlsx",
       "encoding": "UTF-8",
       "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho"
     }
