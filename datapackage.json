@@ -58,6 +58,7 @@
     }
   ],
   "name": "projetos-acordo-judicial-reparacao-vale",
+  "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
   "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho",
   "title": "Projetos Acordo Judicial de Reparação da Vale",
   "contributors": [
