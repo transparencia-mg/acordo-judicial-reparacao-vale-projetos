@@ -1,0 +1,21 @@
+contributors:
+  - role: author
+    title: Comitê Brumadinho
+description: Contém os valores destinados aos projetos por meio do Acordo Judicial
+  firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens
+  da Vale S.A. em Brumadinho
+name: projetos-acordo-judicial-reparacao-vale
+owner_org: secretaria-de-estado-de-planejamento-e-gestao-seplag
+profile: tabular-data-package
+resources:
+  - description: Contém os valores destinados aos projetos por meio do Acordo Judicial
+      firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens
+      da Vale S.A. em Brumadinho
+    encoding: UTF-8
+    format: xlsx
+    name: projetos-acordo-judicial-reparacao-vale
+    path: data/projetos_acordo_judicial_reparacao_vale.xlsx
+    profile: tabular-data-resource
+    schema: schemas/schema_v1.yaml
+    title: Projetos Acordo Judicial de Reparação da Vale
+title: Projetos Acordo Judicial de Reparação da Vale
