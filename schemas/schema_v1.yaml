@@ -14,7 +14,7 @@ fields:
     format: default
     name: codigo_orgao
     title: Código Órgão
-    type: number
+    type: text
   - description: Descrição da Unidade Orçamentária responsável pelo Projeto
     format: default
     name: orgao
