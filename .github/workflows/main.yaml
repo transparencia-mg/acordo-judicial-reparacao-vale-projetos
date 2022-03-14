@@ -9,6 +9,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Build datapackage.json
         run: python scripts/convert_datapackage.py
       - name: Validate data
@@ -22,7 +28,7 @@ jobs:
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
-            python-version: 3.9
+          python-version: 3.9
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Commit new datapackage.json
