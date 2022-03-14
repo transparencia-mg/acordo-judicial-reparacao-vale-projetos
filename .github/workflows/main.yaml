@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Build datapackage.json
+        run: python scripts/convert_datapackage.py
       - name: Validate data
         uses: frictionlessdata/repository@v1
   Update:
@@ -23,8 +25,6 @@ jobs:
             python-version: 3.9
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Build datapackage.json
-        run: python scripts/convert_datapackage.py
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
       - name: Update data package to CKAN with dpckan
