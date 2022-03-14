@@ -1,17 +1,17 @@
-# this workflow will automate datapackage validation with frictionless
-# for more information see: https://repository.frictionlessdata.io/
-name: frictionless
+name: Update
 
 on: [push]
 
 jobs:
-  validate:
+  frictionless-validate:
+  # this workflow will automate datapackage validation with frictionless
+  # for more information see: https://repository.frictionlessdata.io/
     runs-on: ubuntu-latest
     steps:
-       - name: Checkout repository
-         uses: actions/checkout@v2
-       - name: Validate data
-         uses: frictionlessdata/repository@v1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate data
+        uses: frictionlessdata/repository@v1
   Update:
     runs-on: ubuntu-latest
     needs: validate
@@ -33,8 +33,7 @@ jobs:
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
           CKAN_KEY: ${{ secrets.CKAN_KEY }}
         run: dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
-      # - name: Delete datapackage.json
-      #   run: rm -rf datapackage.json
-      # - name: Commit datapackage.json exclusion
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-
+      - name: Delete datapackage.json
+        run: rm -rf datapackage.json
+      - name: Commit datapackage.json exclusion
+        uses: stefanzweifel/git-auto-commit-action@v4
