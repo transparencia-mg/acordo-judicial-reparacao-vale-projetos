@@ -1,0 +1,34 @@
+fields:
+  - description: Código do Projeto no armazém SIAFI (Sistema Integrado de Administração
+      Financeira de Minas Gerais )
+    format: default
+    name: codigo_siafi
+    title: Código SIAFI
+    type: number
+  - description: Anexo ao qual o Projeto se refere conforme o Acordo de Reparação.
+    format: default
+    name: anexo
+    title: Anexo
+    type: string
+  - description: Código da Unidade Orçamentária responsável pelo Projeto
+    format: default
+    name: codigo_orgao
+    title: Código Órgão
+    type: number
+  - description: Descrição da Unidade Orçamentária responsável pelo Projeto
+    format: default
+    name: orgao
+    title: Órgão
+    type: string
+  - description: Descrição do Projeto conforme consta no Acordo de Reparação
+      e de execução do Governo do Estado
+    format: default
+    name: projeto
+    title: Projeto
+    type: string
+  - description: Valor destinado ao projeto com as devidas correções por meio
+      da aplicação do IPCA
+    format: default
+    name: valor_total_projeto
+    title: Valor Total do Projeto
+    type: number
