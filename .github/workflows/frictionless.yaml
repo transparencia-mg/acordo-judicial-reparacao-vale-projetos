@@ -24,9 +24,17 @@ jobs:
             python-version: 3.9
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Build datapackage.json
+        run: python scripts/convert_datapackage.py
+      - name: Commit new datapackage.json
+        uses: stefanzweifel/git-auto-commit-action@v4
       - name: Update data package to CKAN with dpckan
         env:
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
           CKAN_KEY: ${{ secrets.CKAN_KEY }}
         run: dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
+      - name: Delete datapackage.json
+        run: rm -rf datapackage.json
+      - name: Commit datapackage.json exclusion
+        uses: stefanzweifel/git-auto-commit-action@v4
 
