@@ -10,7 +10,7 @@ build-dataset: clean data datapackage.json
 data: $(CSV_FILES) ## Convert raw xlsx files to csv
 
 $(CSV_FILES): data/%.csv : data/raw/%.xlsx
-	@echo "Converting xlsx files to csv..."
+	@echo Converting data/raw/$*.xlsx file to data/$*.csv...
 	@frictionless extract --csv data/raw/$*.xlsx > data/$*.csv
 
 datapackage.json : datapackage.yaml ## Build datapackage.json from datapackage.yaml
