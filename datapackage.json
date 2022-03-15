@@ -1,0 +1,81 @@
+{
+  "name": "projetos-acordo-judicial-reparacao-vale",
+  "title": "Projetos Acordo Judicial de Reparação da Vale",
+  "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho",
+  "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "projetos-acordo-judicial-reparacao-vale",
+      "title": "Projetos Acordo Judicial de Reparação da Vale",
+      "profile": "tabular-data-resource",
+      "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho",
+      "encoding": "utf-8",
+      "format": "csv",
+      "path": "data/projetos_acordo_judicial_reparacao_vale.csv",
+      "schema": {
+        "fields": [
+          {
+            "description": "Código do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais )",
+            "format": "default",
+            "name": "codigo_siafi",
+            "title": "Código SIAFI",
+            "type": "number"
+          },
+          {
+            "description": "Anexo ao qual o Projeto se refere conforme o Acordo de Reparação.",
+            "format": "default",
+            "name": "anexo",
+            "title": "Anexo",
+            "type": "string"
+          },
+          {
+            "description": "Código da Unidade Orçamentária responsável pelo Projeto",
+            "format": "default",
+            "name": "codigo_orgao",
+            "title": "Código Órgão",
+            "type": "number"
+          },
+          {
+            "description": "Descrição da Unidade Orçamentária responsável pelo Projeto",
+            "format": "default",
+            "name": "orgao",
+            "title": "Órgão",
+            "type": "string"
+          },
+          {
+            "description": "Descrição do Projeto conforme consta no Acordo de Reparação e de execução do Governo do Estado",
+            "format": "default",
+            "name": "projeto",
+            "title": "Projeto",
+            "type": "string"
+          },
+          {
+            "description": "Valor destinado ao projeto com as devidas correções por meio da aplicação do IPCA",
+            "format": "default",
+            "name": "valor_total_projeto",
+            "title": "Valor Total do Projeto",
+            "type": "number"
+          }
+        ]
+      },
+      "dialect": {
+        "delimiter": ","
+      },
+      "scheme": "file",
+      "hashing": "md5",
+      "stats": {
+        "hash": "9d9b7921ee510362f7b6900593d1a77b",
+        "bytes": 243,
+        "fields": 6,
+        "rows": 1
+      }
+    }
+  ],
+  "contributors": [
+    {
+      "role": "author",
+      "title": "Comitê Brumadinho"
+    }
+  ]
+}
