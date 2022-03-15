@@ -1,34 +1,165 @@
 fields:
-  - description: Código do Projeto no armazém SIAFI (Sistema Integrado de Administração
-      Financeira de Minas Gerais )
+  - name: codigo_projeto
+    title: Código Projeto
+    type: integer
     format: default
-    name: codigo_siafi
-    title: Código SIAFI
-    type: number
-  - description: Anexo ao qual o Projeto se refere conforme o Acordo de Reparação.
-    format: default
-    name: anexo
-    title: Anexo
-    type: string
-  - description: Código da Unidade Orçamentária responsável pelo Projeto
-    format: default
-    name: codigo_orgao
-    title: Código Órgão
-    type: number
-  - description: Descrição da Unidade Orçamentária responsável pelo Projeto
-    format: default
-    name: orgao
-    title: Órgão
-    type: string
-  - description: Descrição do Projeto conforme consta no Acordo de Reparação
-      e de execução do Governo do Estado
-    format: default
-    name: projeto
+    bareNumber: true
+    description: |
+     - >
+     Número de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).
+    notes:
+     - No Armazém de Dados SIAFI o campo é identificado como 'ContratoConvênio Entrada';
+     - No Armazém de Dados SIGCON- Entrada campo é identificado como 'Convênio Número Sequencial SIAFI'
+    constraints:
+     enum:
+      - '9288130'
+      - '9288132'
+      - '9288133'
+      - '9288134'
+      - '9288135'
+      - '9288136'
+      - '9288137'
+      - '9288138'
+      - '9288139'
+      - '9288141'
+      - '9288142'
+      - '9288143'
+      - '9288144'
+      - '9288145'
+      - '9288147'
+      - '9288148'
+      - '9288149'
+      - '9288150'
+      - '9288152'
+      - '9288153'
+      - '9288154'
+      - '9288155'
+      - '9288167'
+      - '9288168'
+      - '9288169'
+      - '9288176'
+      - '9288177'
+      - '9288178'
+      - '9288179'
+      - '9288180'
+      - '9288181'
+      - '9288182'
+      - '9288183'
+      - '9288185'
+      - '9288186'
+      - '9288187'
+      - '9288188'
+      - '9288189'
+      - '9288190'
+      - '9288191'
+      - '9288192'
+      - '9288193'
+      - '9288194'
+      - '9288195'
+      - '9288196'
+      - '9288198'
+      - '9288209'
+      - '9288210'
+      - '9288211'
+      - '9288212'
+      - '9288213'
+      - '9288214'
+      - '9321270'
+  - name: projeto
     title: Projeto
     type: string
-  - description: Valor destinado ao projeto com as devidas correções por meio
-      da aplicação do IPCA
     format: default
-    name: valor_total_projeto
-    title: Valor Total do Projeto
+    description: |
+       - >
+        Descrição do projeto conforme consta no Acordo Judicial de de Reparação firmado entre Estado de
+        Minas Gerais e Vale S.A.
+    constraints:
+      enum:
+        - 'Melhoria da infraestrutura dos municípios'
+        - 'Recuperação de rodovias pavimentadas em pior estado, conforme avaliação técnica do DER-MG / conclusão de corredor logístico estruturante, conforme critérios técnicos da Seinfra / melhoria da infraestrutura dos municípios'
+        - 'Construção de pontes em São Francisco, Manga e São Romão sobre o Rio São Francisco'
+        - 'Recuperação de rodovias pavimentadas em pior estado, conforme avaliação técnica do DER-MG/conclusão de corredor logístico estruturante, conforme critérios técnicos da SEINFRA'
+        - 'Realização de obras rodoviárias - Caeté - Barão de Cocais e Contorno de Barão de Cocais'
+        - 'Implantação do Sistema de Informações Regulatórias da ARSAE-MG'
+        - 'Reestruturação dos Hospitais da Rede FHEMIG (Hospital Infantil João Paulo II, Hospital João XXIII e Hospital Júlia Kubitschek)'
+        - 'Ampliação da rede de rádio digital no interior do Estado de Minas Gerais'
+        - 'Proteção policial individual e do cidadão mineiro'
+        - 'Atualização do Plano Diretor de Desenvolvimento Integrado da Região Metropolitana de Belo Horizonte - PDDI-RMBH'
+        - 'Georreferenciamento de bens culturais protegidos'
+        - 'Fortalecimento da estrutura e dos processos do Instituto Mineiro de Agropecuária'
+        - 'Implantação da Ouvidoria 4.0 e Ouvidoria Móvel'
+        - 'Construção do Núcleo Integrado de Perícias da Polícia Civil de Minas Gerais'
+        - 'Projeto ABIS - Sistema Automatizado de Identificação Biométrica'
+        - 'Convivência com a Seca - Construção de cisternas'
+        - 'Fortalecimento do atendimento à saúde militar'
+        - 'Revitalização do Parque de Exposições Bolivar de Andrade'
+        - 'Segurança Rural e de Áreas de Risco'
+        - 'Fortalecimento da competitividade turística de Minas Gerais'
+        - 'Pesquisas, Tendências e Monitoramento da Cultura e do Turismo'
+        - 'Plano de Desenvolvimento Integrado do Turismo em Minas Gerais'
+        - 'Fortalecimento e reestruturação tecnológica da Controladoria Geral do Estado'
+        - 'Reestruturação das Tecnologias de Informação do CBMMG'
+        - 'Expansão e fortalecimento da Academia do Corpo de Bombeiros Militar '
+        - 'Execução de obras e serviços de engenharia em várias unidades do CBMMG'
+        - 'Reestruturação logística, tecnológica e de cobrança da dívida ativa da AGE'
+        - 'Melhoria da infraestrutura dos municípios - Outros repasses'
+        - 'Prevenção de Enchentes - Construção de Bacias de Contenção no Córrego Ferrugem'
+        - 'Prevenção de Enchentes - Desapropriação para construção de bacias de contenção no Córrego Riacho das Pedras.'
+        - 'Implantação do Rodoanel da Região Metropolitana de Belo Horizonte'
+        - 'Reintegração social e humanização do sistema prisional'
+        - 'Ampliação de postos de abastecimento próprios do Estado'
+        - 'Melhoria da estrutura logística e energética da Cidade Administrativa para redução de custos'
+        - 'Elaboração de Plano Metropolitano de Segurança Hídrica para a Região Metropolitana de Belo Horizonte.'
+        - 'Ações de Prevenção e Combate a Incêndio em Unidades de Conservação Estaduais'
+        - 'Consolidação das unidades de conservação no Estado de Minas Gerais'
+        - 'Construção e/ou manutenção de Centros de Triagem e Reabilitação de Animais Silvestres no Estado de Minas Gerais'
+        - 'Consultoria técnica sobre a descaracterização das barragens I e II da Mundo Mineração Ltda.'
+        - 'Estruturas de apoio'
+        - 'Ressarcimentos de despesas públicas'
+        - 'Contratações temporárias'
+        - 'Implantação do Sistema de Gestão de Processos (BPMS) no Instituto Mineiro de Agropecuária (IMA)'
+        - 'Reestruturação do laboratório de química agropecuária do Instituto Mineiro de Agropecuária'
+        - 'Fortalecimento da estrutura de fiscalização do Sistema Estadual de Meio Ambiente'
+        - 'Estruturação operacional da Polícia Civil de Minas Gerais'
+        - 'Conclusão de obra e Equipagem de Hospitais Regionais'
+        - 'Estudo de viabilidade técnica e financeira e modelo de gestão da reestruturação da Fundação Ezequiel Dias – Funed'
+        - 'Elaboração de instrumentos de gestão para desenvolvimento de mineração sustentável e competitiva - Avaliação Ambiental Estratégica'
+        - 'Elaboração de instrumentos de gestão para desenvolvimento de mineração sustentável e competitiva - Elaboração do Plano Estadual da Mineração de Minas Gerais'
+        - 'Intervenções e Obras a serem realizadas, sob a responsabilidade e de propriedade do Estado de Minas Gerais, com o objetivo de aumentar a resiliência das Bacias do Paraopeba e Rio das Velhas, de modo a garantir o abastecimento da Região Metropolitana de Belo Horizonte - RMBH'
+        - 'Implantação de Fábrica de Software para construção de sistema de governança ambiental'
+        - 'Estruturação, reforma e ampliação da Fundação Ezequiel Dias – Funed'
+        - 'Plano de Desenvolvimento da Cadeia Agropecuária'
+  - name: anexo
+    title: Anexo do Acordo
+    type: string
+    format: default
+    bareNumber: true
+    description: |
+     - >
+     Anexo ao qual o Projeto está np Acordo Judicial de de Reparação firmado entre Estado de Minas Gerais e Vale S.A.
+      - Anexo II.3 Projetos de Segurança Hidrica;
+      - Anexo III  Programa de Mobilidade:
+      - Anexo IV  Programa de Fortalecimento do Serviço Público
+      - Ressarcimentos e contratações temporárias
+      - Estruturas de Apoio
+    constraints:
+      enum:
+        - 'Estruturas de apoio'
+        - 'II.3'
+        - 'III'
+        - 'IV'
+        - 'Ressarcimentos e contratações temporárias'
+    missingValues:
+      - ''
+  - name: valor_projeto
+    title: Valor do Projeto
     type: number
+    format: default
+    bareNumber: true
+    decimalChar: ','
+    constraints:
+      required: true
+    description: |
+      - >
+      Valor total destinado ao projeto conforme Acordo Judicial de Reparação e Deliberações do Conselho Superior do Comitê Gestor
+      Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021)

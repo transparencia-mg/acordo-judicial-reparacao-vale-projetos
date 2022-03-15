@@ -1,20 +1,30 @@
 name: projetos-acordo-judicial-reparacao-vale
-title: Projetos Acordo Judicial de Reparação da Vale
-description: Contém os valores destinados aos projetos por meio do Acordo Judicial
-  firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens
-  da Vale S.A. em Brumadinho
+title: Projetos do Acordo Judicial de Reparação da Vale
+description: |
+  ->
+  Contém valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar
+  os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho.
+
+  As alterações nos valores do Projetos ocorrem conforme deliberações do Conselho Superior do Comitê Gestor
+  Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº
+  48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021)
 owner_org: secretaria-de-estado-de-planejamento-e-gestao-seplag
 profile: tabular-data-package
 resources:
-  - name: projetos-acordo-judicial-reparacao-vale
-    title: Projetos Acordo Judicial de Reparação da Vale
-    profile: tabular-data-resource
-    description: Contém os valores destinados aos projetos por meio do Acordo Judicial
-      firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens
-      da Vale S.A. em Brumadinho
+  - description: |
+     ->
+      Contém valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar
+      os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho.
+
+      As alterações nos valores do Projetos ocorrem conforme deliberações do Conselho Superior do Comitê Gestor
+      Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº
+      48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021)
     encoding: UTF-8
     format: csv
+    name: projetos-acordo-judicial-reparacao-vale
     path: data/projetos_acordo_judicial_reparacao_vale.csv
+    profile: tabular-data-resource
+    title: Projetos Acordo Judicial de Reparação da Vale
     schema: schemas/schema_v1.yaml
     dialect: schemas/dialect_v1.yaml
 contributors:
