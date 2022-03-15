@@ -14,6 +14,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build datapackage.json
         run: make datapackage.json
+      - name: Build csv data
+        run: make data
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   frictionless-validate:
