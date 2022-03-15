@@ -13,7 +13,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Build datapackage.json
-        run: frictionless describe --type package --stats --json datapackage.yaml > datapackage.json
+        run: make datapackage.json
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   frictionless-validate:
