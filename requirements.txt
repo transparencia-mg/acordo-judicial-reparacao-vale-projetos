@@ -1,2 +1,2 @@
 dpckan==0.1.15
-frictionless==4.26.0
+frictionless[excel]==4.26.0
