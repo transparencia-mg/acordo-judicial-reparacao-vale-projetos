@@ -1,0 +1,3 @@
+main:
+  tasks:
+    - path: datapackage.json
