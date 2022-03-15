@@ -12,6 +12,8 @@ jobs:
             python-version: 3.9
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Clean dataset
+        run: make clean
       - name: Build csv data
         run: make data
       - name: Build datapackage.json
