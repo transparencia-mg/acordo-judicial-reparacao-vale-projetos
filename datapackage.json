@@ -7,13 +7,66 @@
   "resources": [
     {
       "description": "Contém os valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho",
-      "encoding": "UTF-8",
+      "encoding": "utf-8",
       "format": "xlsx",
       "name": "projetos-acordo-judicial-reparacao-vale",
       "path": "data/projetos_acordo_judicial_reparacao_vale.xlsx",
       "profile": "tabular-data-resource",
-      "schema": "schemas/schema_v1.yaml",
-      "title": "Projetos Acordo Judicial de Reparação da Vale"
+      "schema": {
+        "fields": [
+          {
+            "description": "Código do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais )",
+            "format": "default",
+            "name": "codigo_siafi",
+            "title": "Código SIAFI",
+            "type": "number"
+          },
+          {
+            "description": "Anexo ao qual o Projeto se refere conforme o Acordo de Reparação.",
+            "format": "default",
+            "name": "anexo",
+            "title": "Anexo",
+            "type": "string"
+          },
+          {
+            "description": "Código da Unidade Orçamentária responsável pelo Projeto",
+            "format": "default",
+            "name": "codigo_orgao",
+            "title": "Código Órgão",
+            "type": "number"
+          },
+          {
+            "description": "Descrição da Unidade Orçamentária responsável pelo Projeto",
+            "format": "default",
+            "name": "orgao",
+            "title": "Órgão",
+            "type": "string"
+          },
+          {
+            "description": "Descrição do Projeto conforme consta no Acordo de Reparação e de execução do Governo do Estado",
+            "format": "default",
+            "name": "projeto",
+            "title": "Projeto",
+            "type": "string"
+          },
+          {
+            "description": "Valor destinado ao projeto com as devidas correções por meio da aplicação do IPCA",
+            "format": "default",
+            "name": "valor_total_projeto",
+            "title": "Valor Total do Projeto",
+            "type": "number"
+          }
+        ]
+      },
+      "title": "Projetos Acordo Judicial de Reparação da Vale",
+      "scheme": "file",
+      "hashing": "md5",
+      "stats": {
+        "hash": "",
+        "bytes": 0,
+        "fields": 6,
+        "rows": 1
+      }
     }
   ],
   "contributors": [
