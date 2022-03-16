@@ -4,9 +4,8 @@ fields:
     type: integer
     format: default
     bareNumber: true
-    description: |
-     - >
-     Número de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).
+    description: >
+      Número de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).
     notes:
      - No Armazém de Dados SIAFI o campo é identificado como 'ContratoConvênio Entrada';
      - No Armazém de Dados SIGCON- Entrada campo é identificado como 'Convênio Número Sequencial SIAFI'
@@ -69,10 +68,8 @@ fields:
     title: Projeto
     type: string
     format: default
-    description: |
-       - >
-        Descrição do projeto conforme consta no Acordo Judicial de de Reparação firmado entre Estado de
-        Minas Gerais e Vale S.A.
+    description: >
+       Descrição do projeto conforme consta no Acordo Judicial de de Reparação firmado entre Estado de Minas Gerais e Vale S.A.
     constraints:
       enum:
         - 'Melhoria da infraestrutura dos municípios'
@@ -134,14 +131,13 @@ fields:
     type: string
     format: default
     bareNumber: true
-    description: |
-     - >
-     Anexo ao qual o Projeto está np Acordo Judicial de de Reparação firmado entre Estado de Minas Gerais e Vale S.A.
+    description: >
+     Anexo e cláusulas ao qual o Projeto está no Acordo Judicial de Reparação firmado entre Estado de Minas Gerais e Vale S.A.
       - Anexo II.3 Projetos de Segurança Hidrica;
       - Anexo III  Programa de Mobilidade:
       - Anexo IV  Programa de Fortalecimento do Serviço Público
-      - Ressarcimentos e contratações temporárias
-      - Estruturas de Apoio
+      - Cláusula 4.4.10 Ressarcimentos e contratações temporárias
+      - Cláusula 4.4.11 Estruturas de Apoio
     constraints:
       enum:
         - 'Estruturas de apoio'
@@ -159,7 +155,6 @@ fields:
     decimalChar: ','
     constraints:
       required: true
-    description: |
-      - >
-      Valor total destinado ao projeto conforme Acordo Judicial de Reparação e Deliberações do Conselho Superior do Comitê Gestor
-      Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021)
+    description: >
+      Valor total destinado ao projeto conforme Acordo Judicial de Reparação e Deliberações do Conselho Superior do Comitê Gestor Pró-Brumadinho no uso das 
+      atribuições conferidas pelo [Decreto nº 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021).
