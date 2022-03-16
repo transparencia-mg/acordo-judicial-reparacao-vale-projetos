@@ -12,6 +12,9 @@ jobs:
             python-version: 3.9
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Clean
+        run: make clean
+      - name: Commit new datapackage.json
       - name: Build
         run: make build
       - name: Commit new datapackage.json
