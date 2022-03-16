@@ -32,15 +32,15 @@ dataset-validate: ## Valida dataset e todos os seus recursos
 dataset-create: ## Cria dataset e todos os seus recursos em instância do CKAN
 	@dpckan dataset create
 
-build-dataset: clean data datapackage.json
-
 data: $(CSV_FILES) ## Convert raw xlsx files to csv
 
 $(CSV_FILES): data/%.csv : data/raw/%.xlsx
 	@echo Converting data/raw/$*.xlsx file to data/$*.csv...
 	@frictionless extract --csv data/raw/$*.xlsx > data/$*.csv
 
-datapackage.json : datapackage.yaml ## Build datapackage.json from datapackage.yaml
+build: datapackage.json
+
+datapackage.json : datapackage.yaml $(CSV_FILES) ## Build datapackage.json from datapackage.yaml
 	@echo "Building datapackage.json..."
 	@frictionless describe --type package --stats --json $< > $@
 
