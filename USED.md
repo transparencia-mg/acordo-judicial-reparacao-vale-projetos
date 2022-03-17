@@ -66,22 +66,22 @@ Após a finalização dos arquivos 1 e 2, acesse a sua conta do [Github](https:/
 
 2. Acima da lista de arquivos, usando o menu suspenso clique em **Adicionar arquivo** e em seguida clique em **upload de arquivos**.
 
-![](static/upload)
+![](static/upload.png)
 
 
 3. Arraste e solte o arquivo 1 ou escolha no seu computador o local onde o arquivo 1 está salvo e adiciona ao repositório.
 
-![](static/arrastar)
+![](static/arrastar.png)
 
 
 4. No final da página, digite uma mensagem na área **commit changes** curta e significativa que descreva a alteração feita no arquivo. Exemplo: adiciona arquivo de conjunto de dados.
 
-![](static/commit)
+![](static/commit.png)
 
 
 5. Clique em Commit changes (Fazer commit das alterações).
 
-![](static/botaocommit)
+![](static/botaocommit.png)
 
 
 6. Verifique se o arquivo 1 foi inserido corretamente e em seguida realize o mesmo procedimento para o arquivo 2.
@@ -117,7 +117,7 @@ Após realizar o Upload do arquivo, será necessário informar qual alteração 
 
 2. Clique na imagem do lápis
 
-![](static/caneta)
+![](static/caneta.png)
 
 
 3. Na próxima tela, insira as informações referentes as atualizações realizadas:
@@ -126,12 +126,12 @@ Após realizar o Upload do arquivo, será necessário informar qual alteração 
 
 4. Ao finalizar as alterações, role até o final da página, digite uma mensagem na área **commit changes** curta e significativa que descreva a alteração feita no arquivo. Exemplo: altera informações referentes ao mês/ano.
 
-![](static/commit)
+![](static/commit.png)
 
 
 5. Clique em Commit changes (Fazer commit das alterações).
 
-![](static/botaocommit)
+![](static/botaocommit.png)
 
 
 6. Verifique se as informações foram alteradas no arquivo, caso deseje corrigir ou alterar outras informações, realize o mesmo procedimento descrito acima. 
