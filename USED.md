@@ -1,86 +1,58 @@
-## MANUAL PARA INSERÇÃO, VALIDAÇÃO E ATUALIZAÇÃO DO CONJUNTO DE DADOS
+# Roteiro para inserção, atualização e validação do conjunto de dados
 
-#### 1. Criação de usuário:
+## 1. Criação de usuário:
 
-Para o envio do conjunto de dados para o Portal de Dados.MG será necessária a criação de uma conta no Github - ferramenta utilizada pela equipe da DTA para armazenamento dos conjunto dados.
+Para o envio do conjunto de dados para o Portal de Dados Abertos do Estado de Minas Gerais - PDA/MG (https://dados.mg.gov.br/) será necessária a criação de uma conta no Github (ferramenta utilizada pela equipe da Diretoria Central de Transparência Ativa - DTA para armazenamento dos conjunto dados).
 
-1. Acesse o link: [Github](https://github.com/signup?source=login) e siga os passos para a criação de uma conta.
+  - Acesse o link: [Github](https://github.com/signup?source=login) e siga os passos para a criação de uma conta.
+  - Após criação do usuário informar a equipe da DTA os usuários para que possamos validar o usuário no repositório.
 
 
-#### 2. Conjunto de Dados:
+## 2. Atualização do conjunto de dados:
 
-Após a criação e validação da conta no Github (verificação da conta no seu e-mail) o próximo passo é a preparação dos arquivos que farão parte do repositório.
+Sempre que os dados do conjunto de dados forem alterados ou atualizados, as novas informações devem ser atualizadas no conjunto de dados. 
 
-#### Arquivo 1 - Conjunto de Dados
+### Arquivo *"Projetos Acordo Judicial da Reparação da Vale"*
 
-Esse arquivo em formato de tabela é o conjunto de dados a ser publicado no Portal Dados.MG.
+Esse arquivo em formato de tabela é o conjunto de dados a ser publicado no Portal Dados Abertos.
 
 No caso do conjunto de dados para o Acordo Judicial, os dados devem seguir a seguinte estrutura:
 
 | codigo_projeto | projeto | anexo | valor_projeto |
 |----------------|---------|-------|---------------|
 |                |         |       |               | 
-|                |         |       |               | 
-|                |         |       |               | 
+ 
+**Importante:**
 
-##### Importante:
 - Cada projeto deve ser alocado em uma linha
 - Não altere a ordem das colunas
 - Salve o arquivo com o nome **projetos_acordo_judicial_reparacao_vale**
 - Salve o arquivo preferencialmente em formato xlxs
 
+### 3. Upload do arquivo
 
-#### Arquivo 2 - Nome e Descrição das Colunas
+Após a atualização dos dados, acesse a sua conta do [Github](https://github.com/login) e em seguida acesse o repositório do conjunto de dados por meio do link [Repositório - acordo-judicial-reparacao-vale](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/data/raw).
 
-Esse arquivo também em formato de tabela é a descrição das colunas do conjunto de dados e também será utilizado pela equipe da DTA para publicar e validar o conjunto de dados.
+#### Passos para o *upload* do arquivo:
 
-No caso do conjunto de dados para o Acordo Judicial, deverão ser enviadas uma descrição sobre o conteúdo de cada coluna do arquivo 1. 
-
-
-| nome_coluna     | descricao | 
-|-----------------|-----------|
-| codigo_projeto  |           |
-| projeto         |           |
-| anexo           |           |
-| valor_projeto   |           |
-
-
-##### Importante:
-- Cada descrição deve ser alocado em uma linha
-- Não altere a ordem das colunas
-- Salve o arquivo com o nome **datapackage**
-- Salve o arquivo preferencialmente em formato xlxs
-
-
-#### 3. Upload dos arquivos 1 e 2:
-
-Após a finalização dos arquivos 1 e 2, acesse a sua conta do [Github](https://github.com/login) e em seguida acesse o repositório do conjunto de dados por meio do link [Repositório - acordo-judicial-reparacao-vale](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/61/melhoria-especificacao/data-raw):
-
-#### Passos para o Upload dos arquivos:
-
-1. Na página acima, siga os seguintes procedimentos.
-
-2. Acima da lista de arquivos, usando o menu suspenso clique em **Adicionar arquivo** e em seguida clique em **upload de arquivos**.
+1. Clique em *Add file* (Adicionar arquivo) e em seguida clique em *upload files* (upload de arquivos*);
 
 ![](static/upload.png)
 
-
-3. Arraste e solte o arquivo 1 ou escolha no seu computador o local onde o arquivo 1 está salvo e adicione ao repositório.
+2. Arraste o arquivo atualizado ou escolha no computador o local onde o arquivo está salvo e adicione ao repositório.
 
 ![](static/arrastar.png)
 
-
-4. No final da página, digite uma mensagem na área **commit changes** curta e significativa que descreva a alteração feita no arquivo. Exemplo: adiciona arquivo de conjunto de dados ou altera o arquivo com a deliberação XX.
+3. No final da página, digite uma mensagem na área *commit changes* curta e significativa que descreva a alteração feita no arquivo. 
+   Exemplo: Atualizada arquivo conforme a deliberação XX.
 
 ![](static/commit.png)
 
-
-5. Clique em Commit changes (Fazer commit das alterações).
+4. Clique em *Commit changes* (Fazer commit das alterações).
 
 ![](static/botaocommit.png)
 
-
-6. Verifique se o arquivo 1 foi inserido corretamente, realizando o passo da validação.
+5. Verifique se o arquivo foi atualizado corretamente.
 
 ![](static/alteracao.png)
 
@@ -89,66 +61,31 @@ Após a finalização dos arquivos 1 e 2, acesse a sua conta do [Github](https:/
 
 #### 4. Validação dos Arquivos:
 
-Após inserir os dois arquivos, o próximo passo é verificar se o arquivo foi validado pelo sistema.
+Após inserir o arquivo, o próximo passo é verificar se o arquivo foi validado pelo sistema.
 
 1. Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/data/raw), verifique na barra acima do arquivo, a situação do arquivo que foi incluído no repositório.
 
-2. Caso no repositório, apareça um tique verde, o arquivo foi validado corretamente, e prossiga para a inclusão do segundo arquivo.
+2. Se no repositório aparecer um 'tique' verde o arquivo foi validado corretamente.
 
 ![](static/correto.png)
 
-
-3. Caso no repositório, apareça um X vermelho, clique em cima do número ao lado e na página seguinte verifique o erro que ocorreu.
+3. Caso apareça um 'X' vermelho, clique no símbolo (X) e em seguida em *Details* para verificar o erro.
 
 ![](static/erro.png)
 
+4. Clique no link onde está sendo exibido o erro de validação. 
+![](static/)
 
-4. Realize a correção do erro, e em seguida, faça o uploado do novo arquivo corrigido.
+5. Corrija o erro, e em seguida, faça o upload do novo arquivo corrigido.
 
 5. Verifique novamente se o arquivo foi validado e só prossiga para o próximo arquivo, após concluir essa etapa. A equipe da DTA está disponível para ajudar na correção erros.
 
 
-#### 5. Atualização dos Arquivos:
+## Controle de alterações
 
-Sempre que os dados do conjunto de dados forem alterados ou atualizados, as novas informações devem ser atualizadas no conjunto de dados. 
+Após realizar o upload e validação do arquivo, será necessário informar quais alterações foram realizadas, por meio do seguindo procedimento:
 
-Para isso, siga os dois procedimentos abaixo:
-
-##### passo 1 - ATUALIZANDO O ARQUIVO
-
-1. Acesse o repositório do conjunto de dados da sua conta do Github, por meio do link [Repositório - acordo-judicial-reparacao-vale](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/data/raw).
-
-2. Acima da lista de arquivos, usando o menu suspenso clique em **Adicionar arquivo** e em seguida clique em **upload de arquivos**.
-
-![](static/upload.png)
-
-
-3. Arraste e solte o arquivo 1 ou escolha no seu computador o local onde o arquivo 1 está salvo e adicione ao repositório.
-
-![](static/arrastar.png)
-
-
-4. No final da página, digite uma mensagem na área **commit changes** curta e significativa que descreva a alteração feita no arquivo. Exemplo: altera o arquivo com a deliberação XX.
-
-![](static/commit.png)
-
-
-5. Clique em Commit changes (Fazer commit das alterações).
-
-![](static/botaocommit.png)
-
-
-6. Verifique se o arquivo 1 foi inserido corretamente, realizando o passo da validação.
-
-![](static/alteracao.png)
-
-
-
-##### passo 2 - INFORMANDO AS ALTERAÇÕES REALIZADAS
-
-Após realizar o Upload do arquivo, será necessário informar qual alteração foi realizada nesse conjunto de dados, por meio do seguindo procedimento:
-
-1. Para isso, acesse o arquivo [CHANGELOG.md](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/blob/main/CHANGELOG.md) e informe as alterações que foram realizadas no arquivo.
+1. Acesse o arquivo [CHANGELOG.md](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/blob/main/CHANGELOG.md) e informe as alterações que foram realizadas no arquivo.
 
 2. Clique na imagem do lápis
 
@@ -156,15 +93,15 @@ Após realizar o Upload do arquivo, será necessário informar qual alteração 
 
 
 3. Na próxima tela, insira as informações referentes as atualizações realizadas:
-- inclua o mês da alteração - utilize: ** ### [0.0.x] - AAAA-MM-DD **
+- inclua o número e data da alteração - utilize: ** ### [0.0.x] - AAAA-MM-DD **
 - para cada alteração, utilize o travessão: * - *
 
-4. Ao finalizar as alterações, role até o final da página, digite uma mensagem na área **commit changes** curta e significativa que descreva a alteração feita no arquivo. Exemplo: altera informações referentes ao mês/ano.
+4. Ao finalizar as alterações, role até o final da página, digite no *commit changes* uma mensagem curta e significativa que descreva a alteração feita no arquivo. Exemplo: altera informações referentes conforme consta na deliberação xx.
 
 ![](static/commit.png)
 
 
-5. Clique em Commit changes (Fazer commit das alterações).
+5. Clique em *Commit changes* (Fazer commit das alterações).
 
 ![](static/botaocommit.png)
 
