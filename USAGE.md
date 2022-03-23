@@ -58,8 +58,8 @@ Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial
 ![](static/correto.png)
 
 2. Caso apareça um *'X'* vermelho significa que existe erro na validação. Nesse caso clique no símbolo *'X'* e em seguida em *Details* para verificar o erro.
- ***inserir imagem***
-![](static/erro.png) alterar imagem
+
+![](static/erro.png) 
 
 2.1 Clique no *link* referente ao erro e verifique a falha apresentada e faça as devidas correções.
 ![](static/)
