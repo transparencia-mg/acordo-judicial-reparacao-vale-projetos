@@ -1,12 +1,12 @@
 {
   "name": "acordo-judicial-reparacao-vale",
   "title": "Acordo Judicial de Reparação da Vale",
-  "description": ">\nContém valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar\nos danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho.\n\nAs alterações nos valores do Projetos ocorrem conforme deliberações do Conselho Superior do Comitê Gestor\nPró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº\n48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021)\n",
+  "description": "Esse repositório tem por objetivo divulgar informações sobre os valores repassados ao Estado de Minas Gerais por meio do Acordo Judicial de Reparação firmado entre o Governo de Minas, o Ministério Público de Minas Gerais (MPMG), o Ministério Público Federal (MPF) e a Defensoria Pública de Minas Gerais (DPMG) com a Vale S.A., sob mediação do Tribunal de Justiça de Minas Gerais (TJMG).\nImportante esclarecer que os valores constantes no Acordo Judicial de Reparação não serão, em sua integralidade, disponibilizados ao Governo de Minas. Dos R$ 37,68 bilhões, apenas R$ 11,06 bilhões efetivamente entrarão para os cofres do Estado.\nOutras informações sobre o Acordo Judicial de Reparação podem ser consultadas na página do [Comitê Pró-Brumadinho](https://www.mg.gov.br/pro-brumadinho).\n",
   "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
   "profile": "tabular-data-package",
   "resources": [
     {
-      "description": "->\nContém valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar\n os danos decorrentes do rompimento das barragens da Vale S.A. em Brumadinho.\n\n As alterações nos valores do Projetos ocorrem conforme deliberações do Conselho Superior do Comitê Gestor\n Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº\n 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021)\n",
+      "description": "Contém valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens  da Vale S.A. em Brumadinho.\nAs alterações nos valores do Projetos ocorrem conforme deliberações do Conselho Superior do Comitê Gestor Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021).\n",
       "encoding": "utf-8",
       "format": "csv",
       "name": "projetos-acordo-judicial-reparacao-vale",
@@ -21,7 +21,7 @@
             "type": "integer",
             "format": "default",
             "bareNumber": true,
-            "description": ">\nNúmero de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).\n",
+            "description": "Número de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).\n",
             "notes": [
               "No Armazém de Dados SIAFI o campo é identificado como 'ContratoConvênio Entrada';",
               "No Armazém de Dados SIGCON- Entrada campo é identificado como 'Convênio Número Sequencial SIAFI'"
@@ -89,7 +89,7 @@
             "title": "Projeto",
             "type": "string",
             "format": "default",
-            "description": ">\n Descrição do projeto conforme consta no Acordo Judicial de de Reparação firmado entre Estado de\n Minas Gerais e Vale S.A.\n",
+            "description": "Descrição do projeto conforme consta no Acordo Judicial de de Reparação firmado entre Estado de Minas Gerais e Vale S.A.\n",
             "constraints": {
               "enum": [
                 "Melhoria da infraestrutura dos municípios",
@@ -155,7 +155,7 @@
             "type": "string",
             "format": "default",
             "bareNumber": true,
-            "description": ">\nAnexo ao qual o Projeto está np Acordo Judicial de de Reparação firmado entre Estado de Minas Gerais e Vale S.A.\n - Anexo II.3 Projetos de Segurança Hidrica;\n - Anexo III  Programa de Mobilidade:\n - Anexo IV  Programa de Fortalecimento do Serviço Público\n - Ressarcimentos e contratações temporárias\n - Estruturas de Apoio\n",
+            "description": "Anexo e cláusulas ao qual o Projeto está no Acordo Judicial de Reparação firmado entre Estado de Minas Gerais e Vale S.A.\n - Anexo II.3 Projetos de Segurança Hidrica;\n - Anexo III  Programa de Mobilidade:\n - Anexo IV  Programa de Fortalecimento do Serviço Público\n - Cláusula 4.4.10 Ressarcimentos e contratações temporárias\n - Cláusula 4.4.11 Estruturas de Apoio\n",
             "constraints": {
               "enum": [
                 "Estruturas de apoio",
@@ -179,7 +179,7 @@
             "constraints": {
               "required": true
             },
-            "description": ">\nValor total destinado ao projeto conforme Acordo Judicial de Reparação e Deliberações do Conselho Superior do Comitê Gestor\nPró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021)\n"
+            "description": "Valor total destinado ao projeto conforme Acordo Judicial de Reparação e Deliberações do Conselho Superior do Comitê Gestor Pró-Brumadinho no uso das  atribuições conferidas pelo [Decreto nº 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021).\n"
           }
         ]
       },
@@ -189,8 +189,8 @@
       "scheme": "file",
       "hashing": "md5",
       "stats": {
-        "hash": "a225b106941ed905e29d5aa11100e17a",
-        "bytes": 5893,
+        "hash": "9c3b5293b793f89d9447f104bb81a3d3",
+        "bytes": 5838,
         "fields": 4,
         "rows": 54
       }
