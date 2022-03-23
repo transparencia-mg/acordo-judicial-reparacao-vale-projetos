@@ -12,10 +12,14 @@ jobs:
             python-version: 3.9
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: hash
+        run: md5sum data/projetos_acordo_judicial_reparacao_vale.csv
       - name: Clean
         run: make clean
       - name: Build
         run: make build
+      - name: hash
+        run: md5sum data/projetos_acordo_judicial_reparacao_vale.csv
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   frictionless:
@@ -27,6 +31,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: hash
+        run: md5sum data/projetos_acordo_judicial_reparacao_vale.csv
       - name: Validate data
         uses: frictionlessdata/repository@v1
   update:

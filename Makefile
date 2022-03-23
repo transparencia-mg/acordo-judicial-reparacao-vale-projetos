@@ -68,7 +68,7 @@ build: datapackage.json
 
 datapackage.json: datapackage.yaml $(CSV_FILES) ## Build datapackage.json from datapackage.yaml
 	@echo "Building datapackage.json..."
-	@frictionless describe --type package --json $< > $@
+	@frictionless describe --type package --stats --json $< > $@
 
 clean:
 	rm -rf data/*.csv
