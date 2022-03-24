@@ -72,7 +72,7 @@
 #
 
 WORKDIR?=.
-VENVDIR?=$(WORKDIR)/.venv
+VENVDIR?=$(WORKDIR)/venv
 REQUIREMENTS_TXT?=$(wildcard requirements.txt)  # Multiple paths are supported (space separated)
 SETUP_PY?=$(wildcard setup.py)                  # Multiple paths are supported (space separated)
 SETUP_CFG?=$(foreach s,$(SETUP_PY),$(wildcard $(patsubst %setup.py,%setup.cfg,$(s))))

@@ -1,7 +1,7 @@
 include config.mk
 include Makefile.venv
 
-.PHONY: help venv list validate create update data build clean
+.PHONY: help list validate create update data build clean
 
 UNAME:= $(shell uname)
 ACTIVATE_UNIX:=. venv/bin/activate
@@ -17,40 +17,25 @@ data: $(CSV_FILES) ## Convert raw xlsx files to csv
 
 $(CSV_FILES): data/%.csv : upload/%.xlsx
 	@echo Converting upload/$*.xlsx file to data/$*.csv...
-	@frictionless extract --csv upload/$*.xlsx > data/$*.csv
+	$(VENV)/python -m frictionless extract --csv upload/$*.xlsx > data/$*.csv
 
 build: datapackage.json ## Build datapackage.json from datapackage.yaml
 
 datapackage.json: datapackage.yaml $(CSV_FILES) schemas/* README.md CHANGELOG.md CONTRIBUTING.md
 	@echo "Building datapackage.json..."
-	@frictionless describe --type package --stats --json $< > $@
+	$(VENV)/python -m frictionless describe --type package --stats --json $< > $@
 
 validate: ## Valida dataset e todos os seus recursos
 	@echo 'Validando conjunto...'
-	@if [[ $(UNAME) = "Linux" ]] || [[ $(UNAME) = "Darwin" ]]; then\
-	  $(ACTIVATE_UNIX); frictionless validate datapackage.json;\
-	fi
-	@if [[ $(UNAME) = "MINGW64"* ]]; then\
-	  $(ACTIVATE_WINDOWS); frictionless validate datapackage.json;\
-	fi
+	$(VENV)/python -m frictionless validate datapackage.json
 
 create: ## Cria dataset e todos os seus recursos em instância do CKAN
 	@echo 'Criando conjunto...'
-	@if [[ $(UNAME) = "Linux" ]] || [[ $(UNAME) = "Darwin" ]]; then\
-	  $(ACTIVATE_UNIX); dpckan dataset create;\
-	fi
-	@if [[ $(UNAME) = "MINGW64"* ]]; then\
-	  $(ACTIVATE_WINDOWS); dpckan dataset create;\
-	fi
+	$(VENV)/python -m dpckan dataset create
 
 update: ## Atualiza dataset e todos os seus recursos em instância do CKAN
 	@echo 'Criando conjunto...'
-	@if [[ $(UNAME) = "Linux" ]] || [[ $(UNAME) = "Darwin" ]]; then\
-	  $(ACTIVATE_UNIX); dpckan dataset update;\
-	fi
-	@if [[ $(UNAME) = "MINGW64"* ]]; then\
-	  $(ACTIVATE_WINDOWS); dpckan dataset update;\
-	fi
+	$(VENV)/python -m  dataset update
 
 clean:
 	rm -rf data/*.csv
