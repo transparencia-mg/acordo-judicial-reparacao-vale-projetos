@@ -34,8 +34,8 @@ create: ## Cria dataset e todos os seus recursos em instância do CKAN
 	$(VENV)/python -m dpckan dataset create
 
 update: ## Atualiza dataset e todos os seus recursos em instância do CKAN
-	@echo 'Criando conjunto...'
-	$(VENV)/python -m  dataset update
+	@echo 'Atualizando conjunto...'
+	$(VENV)/python -m dpckan dataset update
 
 clean:
 	rm -rf data/*.csv
