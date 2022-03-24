@@ -1,10 +1,9 @@
-
 include config.mk
 
 .PHONY: help venv list validate create update data build clean
 
-UNAME := $(shell uname)
-ACTIVATE_LINUX:=. venv/bin/activate
+UNAME:= $(shell uname)
+ACTIVATE_UNIX:=. venv/bin/activate
 ACTIVATE_WINDOWS:=. venv/Scripts/activate
 
 help:
@@ -13,48 +12,48 @@ help:
 venv: ## Cria ambiente virtual python e instala pacotes.
 	@echo 'Criando ambiente virtual python e instalando pacotes...'
 	@rm -rf venv
-	@if [ $(UNAME) = "Linux" ]; then\
+	@if [[ $(UNAME) = "Linux" ]] || [[ $(UNAME) = "Darwin" ]]; then\
 	  python3 -m venv venv;\
-	  $(ACTIVATE_LINUX); pip install -r requirements.txt;\
+	  $(ACTIVATE_UNIX); pip install -r requirements.txt;\
 	fi
-	@if [ $(UNAME) = "MINGW64_NT-10.0-18362" ]; then\
+	@if [[ $(UNAME) = "MINGW64"* ]]; then\
 	  python -m venv venv;\
 	  $(ACTIVATE_WINDOWS); pip install -r requirements.txt;\
 	fi
 
 list: ## Lista pacotes instalados em ambiente virtual python.
 	@echo 'Listando pacotes instalados em ambiente virtual python....'
-	@if [ $(UNAME) = "Linux" ]; then\
-	  $(ACTIVATE_LINUX); pip list;\
+	@if [[ $(UNAME) = "Linux" ]] || [[ $(UNAME) = "Darwin" ]]; then\
+	  $(ACTIVATE_UNIX); pip list;\
 	fi
-	@if [ $(UNAME) = "MINGW64_NT-10.0-18362" ]; then\
+	@if [[ $(UNAME) = "MINGW64"* ]]; then\
 	  $(ACTIVATE_WINDOWS); pip list;\
 	fi
 
 validate: ## Valida dataset e todos os seus recursos
 	@echo 'Validando conjunto...'
-	@if [ $(UNAME) = "Linux" ]; then\
-	  $(ACTIVATE_LINUX); frictionless validate datapackage.json;\
+	@if [[ $(UNAME) = "Linux" ]] || [[ $(UNAME) = "Darwin" ]]; then\
+	  $(ACTIVATE_UNIX); frictionless validate datapackage.json;\
 	fi
-	@if [ $(UNAME) = "MINGW64_NT-10.0-18362" ]; then\
+	@if [[ $(UNAME) = "MINGW64"* ]]; then\
 	  $(ACTIVATE_WINDOWS); frictionless validate datapackage.json;\
 	fi
 
 create: ## Cria dataset e todos os seus recursos em instância do CKAN
 	@echo 'Criando conjunto...'
-	@if [ $(UNAME) = "Linux" ]; then\
-	  $(ACTIVATE_LINUX); dpckan dataset create;\
+	@if [[ $(UNAME) = "Linux" ]] || [[ $(UNAME) = "Darwin" ]]; then\
+	  $(ACTIVATE_UNIX); dpckan dataset create;\
 	fi
-	@if [ $(UNAME) = "MINGW64_NT-10.0-18362" ]; then\
+	@if [[ $(UNAME) = "MINGW64"* ]]; then\
 	  $(ACTIVATE_WINDOWS); dpckan dataset create;\
 	fi
 
 update: ## Atualiza dataset e todos os seus recursos em instância do CKAN
 	@echo 'Criando conjunto...'
-	@if [ $(UNAME) = "Linux" ]; then\
-	  $(ACTIVATE_LINUX); dpckan dataset update;\
+	@if [[ $(UNAME) = "Linux" ]] || [[ $(UNAME) = "Darwin" ]]; then\
+	  $(ACTIVATE_UNIX); dpckan dataset update;\
 	fi
-	@if [ $(UNAME) = "MINGW64_NT-10.0-18362" ]; then\
+	@if [[ $(UNAME) = "MINGW64"* ]]; then\
 	  $(ACTIVATE_WINDOWS); dpckan dataset update;\
 	fi
 
