@@ -24,7 +24,7 @@ resources:
     path: data/projetos_acordo_judicial_reparacao_vale.csv
     profile: tabular-data-resource
     title: Projetos Acordo Judicial de Reparação da Vale
-    schema: schemas/schema_v1.yaml
+    schema: schemasss/schema_v1.yaml
     dialect: schemas/dialect_v1.yaml
 contributors:
   - role: author
