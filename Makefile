@@ -60,13 +60,13 @@ update: ## Atualiza dataset e todos os seus recursos em instância do CKAN
 
 data: $(CSV_FILES) ## Convert raw xlsx files to csv
 
-$(CSV_FILES): data/%.csv : data/raw/%.xlsx
-	@echo Converting data/raw/$*.xlsx file to data/$*.csv...
-	@frictionless extract --csv data/raw/$*.xlsx > data/$*.csv
+$(CSV_FILES): data/%.csv : upload/%.xlsx
+	@echo Converting upload/$*.xlsx file to data/$*.csv...
+	@frictionless extract --csv upload/$*.xlsx > data/$*.csv
 
 build: datapackage.json
 
-datapackage.json: datapackage.yaml $(CSV_FILES) ## Build datapackage.json from datapackage.yaml
+datapackage.json: $(CSV_FILES) datapackage.yaml schemas/* README.md CHANGELOG.md CONTRIBUTING.md ## Build datapackage.json from datapackage.yaml
 	@echo "Building datapackage.json..."
 	@frictionless describe --type package --stats --json $< > $@
 
