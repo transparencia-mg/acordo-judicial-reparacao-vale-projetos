@@ -1,22 +1,23 @@
 # Instruções para atualização, validação e publicação do conjunto de dados
 
-### 1- Criação de usuário:
+## 1- Criação de usuário
 
 Para o envio do conjunto de dados para o Portal de Dados Abertos do Estado de Minas Gerais - PDA/MG (https://dados.mg.gov.br/) será necessária a criação de uma conta no Github (ferramenta utilizada pela equipe da Diretoria Central de Transparência Ativa - DTA para armazenamento dos conjunto dados) e no Portal de Dados Abertos
 
 #### Github
 
   - Acesse o Github através do [link](https://github.com/signup?source=login) e siga os passos para a criação de uma conta.
-  - Após criação do usuário informar a equipe da DTA os usuários para que possamos validar o acesso ao repositório.
+  - Após criação do usuário informar a equipe da DTA os usuários para que possamos vinculá-los ao repositório.
 
 #### Portal de Dados Abertos
 
-  - Preencher e enviar para a DTA o formulário de criação de usuário disponível no [SEI]():
-      - Processo:
-      - Tipo de Documento:
+Preencher e enviar para a DTA o formulário de criação de usuário disponível no SEI:
+
+- Tipo de Processo: Governo Aberto, Transparência e Controle Social
+- Tipo de Documento:
 
 
-## 2- Atualização e Validação do GitHub
+## 2- Atualização e validação no GitHub
 
 #### 2.1 Atualização
 
@@ -25,7 +26,7 @@ Sempre que os dados forem alterados as novas informações devem ser atualizadas
 **Premissas:**
 
 - Cada projeto deve ser alocado em uma linha;
-- Não altere a ordem das colunas;
+- A ordem das colunas não podem ser alteradas;
 - Salve o arquivo com o nome **projetos_acordo_judicial_reparacao_vale**
 - O arquivo deve ser salvo no formato .xlxs
 
@@ -33,24 +34,24 @@ Sempre que os dados forem alterados as novas informações devem ser atualizadas
 
 Após a atualização dos dados, acesse a sua conta do [Github](https://github.com/login) e em seguida acesse o repositório do conjunto de dados por meio do link [Repositório - acordo-judicial-reparacao-vale](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/data/raw).
 
-1. Clique em *Add file* (Adicionar arquivo) e em seguida clique em *upload files* (upload de arquivos*);
+- Clique em *Add file* (Adicionar arquivo) e em seguida clique em *upload files* (upload de arquivos*);
 
 ![](static/upload.png)
 
-2. Arraste o arquivo ou clique em *choose your files* para selecionar o arquivo no computador o local.
+- Arraste o arquivo ou clique em *choose your files* para selecionar o arquivo no computador o local.
 
 ![](static/arrastar.png)
 
-3. Após o arquivo ser carregado digite na área *Commit changes* uma mensagem curta e significativa que descreva a alteração feita no arquivo e clique em no botão verde *Commit changes*                    
-***Exemplo***: *Atualiza arquivo conforme a Deliberação XX.*
+- Após o arquivo ser carregado digite na área *Commit changes* uma mensagem curta e significativa que descreva a alteração feita no arquivo e clique no botão verde *Commit changes*                    
+ ***Exemplo***: *Atualiza arquivo conforme a Deliberação XX.*
 
 ![](static/commit.png)
 
 ## 3. Validação
 
-Após realizar o *commit* do arquivo é necessário verificar se o mesmo foi validado, ou seja, se o arquivo está de acordo com as regras de validação definidas.
+Após realizar o *commit* do arquivo é necessário verificar se o mesmo foi validado, ou seja, se o arquivo está de acordo com as regras de validação estabelecidas.
 
-Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/data/raw), verifique na barra acima do arquivo, a situação do arquivo que foi incluído no repositório.
+Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/data/raw) verifique, na barra acima do arquivo, a situação do arquivo.
 
 1. Se aparecer um 'tique' verde o arquivo foi validado corretamente.
  ***inserir imagem***
@@ -59,12 +60,13 @@ Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial
 
 2. Caso apareça um *'X'* vermelho significa que existe erro na validação. Nesse caso clique no símbolo *'X'* e em seguida em *Details* para verificar o erro.
 
-![](static/erro.png) 
+![](static/erro.png)
 
 2.1 Clique no *link* referente ao erro e verifique a falha apresentada e faça as devidas correções.
 ![](static/)
 
 2.2. Faça novamente o *upload* do arquivo corrigido e repita os passos executados anteriormente.
+
 
 ## 3. Controle de alterações
 
@@ -83,6 +85,8 @@ Após realizar o *upload* e validação do arquivo, será necessário informar q
 Exemplo: Altera informações conforme consta na deliberação xx.
 
 ![](static/botaocommit.png)
+
+__________________
 
 ## 4. Atualização do arquivo no Portal de Dados Abertos
 
