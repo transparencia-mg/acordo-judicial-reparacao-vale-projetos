@@ -1,4 +1,4 @@
-[![Update](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/actions/workflows/main.yaml/badge.svg)](https://repository.frictionlessdata.io/report?user=transparencia-mg&repo=acordo-judicial-reparacao-vale&flow=update)
+[![Atualização](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/actions/workflows/atualização.yaml/badge.svg)](https://repository.frictionlessdata.io/report?user=transparencia-mg&repo=acordo-judicial-reparacao-vale&flow=atualização)
 
 Esse repositório tem por objetivo divulgar os valores previstos nos projetos conforme informações que constam no [Acordo Judicial de Reparação](https://www.mg.gov.br/pro-brumadinho/pagina/entenda-o-acordo-judicial) e nas deliberações do Conselho Superior do Comitê Gestor Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021).
 
