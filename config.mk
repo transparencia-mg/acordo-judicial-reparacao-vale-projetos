@@ -1,2 +1,2 @@
-XLSX_FILES=$(wildcard data/raw/*.xlsx)
-CSV_FILES=$(patsubst data/raw/%.xlsx, data/%.csv, $(XLSX_FILES))
+XLSX_FILES=$(wildcard upload/*.xlsx)
+CSV_FILES=$(patsubst upload/%.xlsx, data/%.csv, $(XLSX_FILES))
