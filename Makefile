@@ -1,7 +1,7 @@
 include config.mk
 include Makefile.venv
 
-.PHONY: help list validate create update data build clean
+.PHONY: help list data build validate compare create update clean
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -24,6 +24,9 @@ datapackage.json: datapackage.yaml $(CSV_FILES) schemas/* README.md CHANGELOG.md
 validate: ## Valida dataset e todos os seus recursos
 	@echo 'Validando conjunto...'
 	@$(VENV)/python -m frictionless validate datapackage.json
+
+compare:
+	@$(VENV)/python -m dtamg-py template compare
 
 create: ## Cria dataset e todos os seus recursos em instância do CKAN
 	@echo 'Criando conjunto...'

@@ -22,8 +22,10 @@ jobs:
         run: make venv
       - name: Build
         run: |
+          make venv
           make data
           make build
+          make compare
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   validate:
