@@ -54,7 +54,7 @@
 #       Default: current working directory.
 #   VENVDIR
 #       Python virtual environment directory.
-#       Default: $(WORKDIR)/.venv
+#       Default: $(WORKDIR)/venv
 #
 # This Makefile was written for GNU Make and may not work with other make
 # implementations.
