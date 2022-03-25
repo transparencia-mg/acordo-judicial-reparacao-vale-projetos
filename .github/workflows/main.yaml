@@ -22,7 +22,6 @@ jobs:
         run: make venv
       - name: Build
         run: |
-          make venv
           make data
           make build
           make compare
