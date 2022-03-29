@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gabrielbdornas/dtamg:latest
-      options: -v $(PWD):/dataset
+      options: -v /:/dataset
     steps:
       - name: build datapackage
         run: |
