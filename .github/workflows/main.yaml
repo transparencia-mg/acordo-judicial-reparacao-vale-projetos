@@ -26,6 +26,8 @@ jobs:
         run: pwd
       - name: echo
         run: echo $PWD
+      - name: echo workspace
+        run: echo ${{ github.workspace }}
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   validate:
