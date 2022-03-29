@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gabrielbdornas/dtamg:latest
-      options: -v $(PWD):/dataset
+      options: -v /:/dataset
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
