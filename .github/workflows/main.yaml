@@ -18,22 +18,20 @@ jobs:
       env:
         pwd: ${GITHUB_WORKSPACE}
       volumes:
-        - /dataset:/__w/acordo-judicial-reparacao-vale/acordo-judicial-reparacao-vale
+        - /dataset:/
     steps:
       - name: build datapackage
         run: ls
+      - name: pwd
+        run: pwd
+      - name: echo
+        run: echo $PWD
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   validate:
   # this workflow will automate datapackage validation with frictionless
   # for more information see: https://repository.frictionlessdata.io/
     runs-on: ubuntu-latest
-    container:
-      image: gabrielbdornas/dtamg:latest
-      env:
-        pwd: ${GITHUB_WORKSPACE}
-      volumes:
-        - /dataset:pwd
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
