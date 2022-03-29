@@ -13,7 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: gabrielbdornas/dtamg:latest
+    container:
+      image: gabrielbdornas/dtamg:latest
+      options: -v $PWD:/dataset
     steps:
       - name: build datapackage
         run: |
@@ -26,7 +28,9 @@ jobs:
   # this workflow will automate datapackage validation with frictionless
   # for more information see: https://repository.frictionlessdata.io/
     runs-on: ubuntu-latest
-    container: gabrielbdornas/dtamg:latest
+    container:
+      image: gabrielbdornas/dtamg:latest
+      options: -v $PWD:/dataset
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
