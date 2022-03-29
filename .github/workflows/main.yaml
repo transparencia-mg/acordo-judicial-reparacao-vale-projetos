@@ -21,11 +21,7 @@ jobs:
         - /dataset:/__w/acordo-judicial-reparacao-vale/acordo-judicial-reparacao-vale
     steps:
       - name: build datapackage
-        run: |
-          ls
-          make data
-          make build
-          make compare
+        run: ls
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   validate:
