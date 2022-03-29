@@ -55,7 +55,7 @@ jobs:
             python-version: 3.9
       - name: Install dependencies
         run: |
-        pip install dpckan==0.1.15
+          pip install dpckan==0.1.15
       - name: Update data package to CKAN with dpckan
         env:
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
