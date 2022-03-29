@@ -22,9 +22,9 @@ jobs:
             python-version: 3.9
       - name: Install dependencies
         run: |
-        pip install pandas==1.4.1
-        pip install openpyxl==3.0.9
-        pip install click==8.0.1
+          pip install pandas==1.4.1
+          pip install openpyxl==3.0.9
+          pip install click==8.0.1
       - name: Data
         run: make data
       - name: Build Datapackage
