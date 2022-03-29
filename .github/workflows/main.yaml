@@ -17,7 +17,7 @@ jobs:
       image: gabrielbdornas/dtamg:latest
       env:
         pwd: ${GITHUB_WORKSPACE}
-      volume:
+      volumes:
         - /dataset:pwd
     steps:
       - name: build datapackage
@@ -35,7 +35,7 @@ jobs:
       image: gabrielbdornas/dtamg:latest
       env:
         pwd: ${GITHUB_WORKSPACE}
-      volume:
+      volumes:
         - /dataset:pwd
     needs: build
     if: github.ref == 'refs/heads/main'
