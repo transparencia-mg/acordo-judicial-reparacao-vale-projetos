@@ -15,7 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gabrielbdornas/dtamg:latest
-      options: -v ${GITHUB_WORKSPACE}:/dataset
+      env:
+        pwd: ${GITHUB_WORKSPACE}
+      volume:
+        - /dataset:pwd
     steps:
       - name: build datapackage
         run: |
@@ -30,7 +33,10 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gabrielbdornas/dtamg:latest
-      options: -v ${GITHUB_WORKSPACE}:/dataset
+      env:
+        pwd: ${GITHUB_WORKSPACE}
+      volume:
+        - /dataset:pwd
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
