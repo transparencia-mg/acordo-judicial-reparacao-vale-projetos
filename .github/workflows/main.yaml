@@ -22,6 +22,7 @@ jobs:
     steps:
       - name: build datapackage
         run: |
+          ls
           make data
           make build
           make compare
