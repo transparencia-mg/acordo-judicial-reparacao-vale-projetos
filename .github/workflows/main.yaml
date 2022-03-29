@@ -13,22 +13,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: gabrielbdornas/dtamg:latest
-      options: -v $GITHUB_WORKSPACE:/work
     steps:
-      - name: build datapackage
-        run: ls
-      - name: ls work
-        run: ls /work
-      - name: pwd
-        run: pwd
-      - name: echo
-        run: echo $GITHUB_WORKSPACE
-      - name: echo workspace
-        run: echo ${{ github.workspace }}
-      - name: make
-        run: make help
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+            python-version: 3.9
+      - name: Install dependencies
+        run: |
+        pip install pandas==1.4.1
+        pip install openpyxl==3.0.9
+        pip install click==8.0.1
+      - name: Data
+        run: make data
+      - name: Build Datapackage
+        run: make build
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   validate:
@@ -47,9 +47,15 @@ jobs:
     needs: validate
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v2
-      - name: Init Docker
-        run: make start
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+            python-version: 3.9
+      - name: Install dependencies
+        run: |
+        pip install dpckan==0.1.15
       - name: Update data package to CKAN with dpckan
         env:
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
