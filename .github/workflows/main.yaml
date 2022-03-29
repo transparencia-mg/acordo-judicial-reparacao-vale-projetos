@@ -1,4 +1,5 @@
 name: Atualização
+
 on:
   push:
     paths:
@@ -14,12 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-            python-version: 3.9
-      - name: Install dependencies
-        run: make venv
+      - name: Init Docker
+        env:
+          CKAN_HOST: ${{ secrets.CKAN_HOST }}
+          CKAN_KEY: ${{ secrets.CKAN_KEY }}
+        run: make start
       - name: Build
         run: |
           make data
@@ -44,12 +44,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-            python-version: 3.9
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - name: Init Docker
+        run: make start
       - name: Update data package to CKAN with dpckan
         env:
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
