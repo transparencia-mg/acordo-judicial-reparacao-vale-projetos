@@ -18,10 +18,12 @@ jobs:
       env:
         pwd: ${GITHUB_WORKSPACE}
       volumes:
-        - /dataset:${{ github.workspace }}
+        - /github/home/dataset:${{ github.workspace }}
     steps:
       - name: build datapackage
         run: ls
+      - name: ls github home
+        run: ls /github/home/
       - name: pwd
         run: pwd
       - name: echo
