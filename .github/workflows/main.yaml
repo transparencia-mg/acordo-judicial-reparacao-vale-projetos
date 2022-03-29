@@ -18,18 +18,20 @@ jobs:
       env:
         pwd: ${GITHUB_WORKSPACE}
       volumes:
-        - /github/home/dataset:${{ github.workspace }}
+        - ${{ github.workspace }}:/workspace
     steps:
       - name: build datapackage
         run: ls
-      - name: ls github home
-        run: ls /github/home/
+      - name: ls workspace
+        run: ls /workspace
       - name: pwd
         run: pwd
       - name: echo
         run: echo $PWD
       - name: echo workspace
         run: echo ${{ github.workspace }}
+      - name: make
+        run: make help
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
   validate:
