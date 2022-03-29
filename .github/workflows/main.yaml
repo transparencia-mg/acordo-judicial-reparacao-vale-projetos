@@ -18,7 +18,7 @@ jobs:
       env:
         pwd: ${GITHUB_WORKSPACE}
       volumes:
-        - /dataset:pwd
+        - /dataset:/__w/acordo-judicial-reparacao-vale/acordo-judicial-reparacao-vale
     steps:
       - name: build datapackage
         run: |
