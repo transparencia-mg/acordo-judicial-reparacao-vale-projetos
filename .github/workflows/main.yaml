@@ -13,14 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: gabrielbdornas/dtamg:latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Init Docker
-        env:
-          CKAN_HOST: ${{ secrets.CKAN_HOST }}
-          CKAN_KEY: ${{ secrets.CKAN_KEY }}
-        run: make start
-      - name: Build
+      - name: build datapackage
         run: |
           make data
           make build
@@ -31,6 +26,7 @@ jobs:
   # this workflow will automate datapackage validation with frictionless
   # for more information see: https://repository.frictionlessdata.io/
     runs-on: ubuntu-latest
+    container: gabrielbdornas/dtamg:latest
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
