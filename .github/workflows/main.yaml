@@ -15,19 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: gabrielbdornas/dtamg:latest
-      env:
-        pwd: ${GITHUB_WORKSPACE}
-      volumes:
-        - ${{ github.workspace }}:/workspace
+      options: -v $GITHUB_WORKSPACE:/work
     steps:
       - name: build datapackage
         run: ls
-      - name: ls workspace
-        run: ls /workspace
+      - name: ls work
+        run: ls /work
       - name: pwd
         run: pwd
       - name: echo
-        run: echo $PWD
+        run: echo $GITHUB_WORKSPACE
       - name: echo workspace
         run: echo ${{ github.workspace }}
       - name: make
