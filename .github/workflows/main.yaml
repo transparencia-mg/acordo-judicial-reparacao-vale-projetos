@@ -37,7 +37,7 @@ jobs:
       - name: Validate data
         uses: frictionlessdata/repository@v1
       - name: Downgrade Click
-        run |
+        run: |
           pip uninstall click
           pip install click==8.0.1
   ckan:
