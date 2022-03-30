@@ -36,10 +36,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Validate data
         uses: frictionlessdata/repository@v1
-      - name: Downgrade Click
-        run: |
-          pip uninstall click
-          pip install click==8.0.1
   ckan:
     runs-on: ubuntu-latest
     container:
