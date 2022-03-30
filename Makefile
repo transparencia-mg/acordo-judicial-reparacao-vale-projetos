@@ -7,7 +7,7 @@ help: ## Informa breve descrição dos comando
 
 start: ## Inicia ambiente para trabalho com conjunto
 	@echo 'Iniciando ambiente...'
-	@docker run -it -v /$(PWD):/dataset -e CKAN_HOST=$(CKAN_HOST) -e CKAN_KEY=$(CKAN_KEY) gabrielbdornas/dtamg:latest bash
+	@sudo docker run -it -v /$(PWD):/dataset -e CKAN_HOST=$(CKAN_HOST) -e CKAN_KEY=$(CKAN_KEY) gabrielbdornas/dtamg:latest bash
 
 exit: ## Fecha ambiente para trabalho com conjunto
 	@echo 'Fechando ambiente...'
