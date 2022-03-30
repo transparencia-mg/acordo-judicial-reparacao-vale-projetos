@@ -16,6 +16,7 @@ jobs:
     container:
       image: gabrielbdornas/dtamg:latest
     steps:
+      - uses: actions/checkout@v2
       - name: Data
         run: make data
       - name: Build
