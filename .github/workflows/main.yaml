@@ -21,10 +21,10 @@ jobs:
         run: make data
       - name: Build
         run: make build
-      - name: Compare
-        run: make compare
       - name: Commit new datapackage.json
         uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Compare
+        run: make compare
   validate:
   # this workflow will automate datapackage validation with frictionless
   # for more information see: https://repository.frictionlessdata.io/
