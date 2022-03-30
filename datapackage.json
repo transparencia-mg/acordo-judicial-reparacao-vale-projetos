@@ -6,7 +6,7 @@
   "profile": "tabular-data-package",
   "resources": [
     {
-      "description": "Contém valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens  da Vale S.A. em Brumadinho.\nAs alterações nos valores do Projetos ocorrem conforme deliberações do Conselho Superior do Comitê Gestor Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021).\n",
+      "description": "Contém valores destinados aos projetos por meio do Acordo Judicial firmado com o objetivo de reparar os danos decorrentes do rompimento das barragens  da Vale S.A. em Brumadinho.\nAs alterações nos valores do Projetos ocorrem conforme deliberações do Conselho Superior do Comitê Gestor Pró-Brumadinho no uso das atribuições conferidas pelo [Decreto nº 48.183/2021](https://www.almg.gov.br/consulte/legislacao/completa/completa.html?tipo=DEC&num=48183&comp=&ano=2021).    \n",
       "encoding": "utf-8-sig",
       "format": "csv",
       "name": "projetos-acordo-judicial-reparacao-vale",
