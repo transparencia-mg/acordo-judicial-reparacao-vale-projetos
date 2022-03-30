@@ -16,7 +16,10 @@ jobs:
     container:
       image: gabrielbdornas/dtamg:latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Clean
+        run: make clean
       - name: Data
         run: make data
       - name: Build
