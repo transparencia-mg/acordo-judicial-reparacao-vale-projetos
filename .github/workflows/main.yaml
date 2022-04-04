@@ -49,9 +49,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Update data package to CKAN with dpckan
         env:
-          USER: ${{ github.actor | tr [:lower:] [:upper:] }}
-          # USER: ${{ github.actor }}
+          USER: ${{ github.actor }}
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
-          CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', env.USER)] }} 
+          CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', env.USER) | tr [:lower:] [:upper:]] }} 
         run: echo  $USER $CKAN_KEY
         # run: dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
