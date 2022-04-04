@@ -53,5 +53,5 @@ jobs:
           CKAN_HOST_USER: CKAN_HOST_"$USER"
           # "$CKAN_HOST_USER": ${{ secrets.CKAN_HOST }}
           CKAN_KEY: ${{ secrets.CKAN_KEY }}
-        run echo $USER
+        run: echo $USER
         # run: dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
