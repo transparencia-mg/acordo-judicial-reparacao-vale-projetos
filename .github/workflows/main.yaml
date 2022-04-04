@@ -52,5 +52,5 @@ jobs:
           USER: ${{ github.actor }}
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
           CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', env.USER)] }}
-        run: echo $CKAN_KEY
+        run: echo ${{ secrets[format('CKAN_KEY_{0}', env.USER)] }} $CKAN_HOST $CKAN_KEY
         # run: dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
