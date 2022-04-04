@@ -21,9 +21,7 @@ jobs:
       - name: test
         env:
           USER: ${{ github.actor }}
-          CKAN_HOST_USER: "CKAN_HOST_" + "$USER"
-          "$CKAN_HOST_USER": ${{ secrets.CKAN_HOST }}
-        run: echo $USER $CKAN_HOST_USER $CKAN_HOST_gabrielbdornas
+        run: echo Olá ${{ secrets[format('CKAN_HOST_{0}', env.USER)] }}
       - name: Clean
         run: make clean
       - name: Data
