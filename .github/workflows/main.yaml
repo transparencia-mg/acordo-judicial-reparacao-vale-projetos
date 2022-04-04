@@ -18,6 +18,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: test
+        env:
+          USER: ${{ github.actor }}
+          CKAN_HOST_USER: CKAN_HOST_"$USER"
+          "$CKAN_HOST_USER": ${{ secrets.CKAN_HOST }}
+        run: echo $USER $CKAN_HOST_USER $CKAN_HOST_gabrielbdornas
       - name: Clean
         run: make clean
       - name: Data
