@@ -47,17 +47,19 @@ jobs:
     # if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
-      - name: downcase REPO
-        run: |
-          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
-      - name: use REPO
-        run: |
-          echo "The value of REPO is: ${REPO}"
+      - id: string
+        uses: ASzc/change-string-case-action@v1
+        with:
+          string: ${{ github.actor }}
+      - run: |
+          echo "${{ steps.string.outputs.uppercase }}"
+      # - run: |
+      #     echo
       # - name: Update data package to CKAN with dpckan
       #   env:
       #     USER: ${{ github.actor }}
       #     CKAN_HOST: ${{ secrets.CKAN_HOST }}
-      #     CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', env.USER)] }}
+      #     CKAN_KEY:
       #   run: |
       #     echo $USER $CKAN_KEY ${{ secrets[format('CKAN_KEY_{0}', env.USER)] }}
       #     dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
