@@ -53,13 +53,12 @@ jobs:
           string: ${{ github.actor }}
       - run: |
           echo "${{ steps.string.outputs.uppercase }}"
-      # - run: |
-      #     echo
+          echo "${{ secrets[format('CKAN_KEY_{0}', steps.string.outputs.uppercase)] }}"
       # - name: Update data package to CKAN with dpckan
       #   env:
       #     USER: ${{ github.actor }}
       #     CKAN_HOST: ${{ secrets.CKAN_HOST }}
-      #     CKAN_KEY:
+      #     CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', env.USER)] }}
       #   run: |
-      #     echo $USER $CKAN_KEY ${{ secrets[format('CKAN_KEY_{0}', env.USER)] }}
+      #     echo $USER $CKAN_KEY
       #     dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
