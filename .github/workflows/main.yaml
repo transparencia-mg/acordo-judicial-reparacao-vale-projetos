@@ -46,8 +46,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: test
-        run: cat ./data/projetos_acordo_judicial_reparacao_vale.csv
       - id: string
         uses: ASzc/change-string-case-action@v1
         with:
