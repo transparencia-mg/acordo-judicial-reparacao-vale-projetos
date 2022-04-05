@@ -1,6 +1,6 @@
 include config.mk
 
-.PHONY: help start exit list validate create update data build compare clean
+.PHONY: help start list validate create update data build compare clean
 
 help: ## Informa breve descrição dos comando
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -8,10 +8,6 @@ help: ## Informa breve descrição dos comando
 start: ## Inicia ambiente para trabalho com conjunto
 	@echo 'Iniciando ambiente...'
 	@docker run -it -v /$(PWD):/dataset -e CKAN_HOST=$(CKAN_HOST) -e CKAN_KEY=$(CKAN_KEY) gabrielbdornas/dtamg:latest bash
-
-exit: ## Fecha ambiente para trabalho com conjunto
-	@echo 'Fechando ambiente...'
-	@exit
 
 list: ## Lista pacotes instalados em ambiente virtual python
 	@echo 'Lista pacotes python instalados...'
@@ -27,13 +23,13 @@ create: ## Cria dataset e todos os seus recursos em instância do CKAN
 
 update: ## Atualiza dataset e todos os seus recursos em instância do CKAN
 	@echo "Atualiza conjunto..."
-	@dpckan dataset update
+	@dpckan --datastore dataset update
 
 data: $(CSV_FILES)  ## Converte arquivos xlsx para csv
 
 $(CSV_FILES): data/%.csv : upload/%.xlsx
 	@echo Converting upload/$*.xlsx file to data/$*.csv...
-	@python /scripts/convert_csv.py $< $@
+	@python ./scripts/convert_csv.py $< $@
 
 build: datapackage.json ## Build datapackage.json from datapackage.yaml
 
@@ -43,8 +39,9 @@ datapackage.json: datapackage.yaml $(CSV_FILES) $(SCHEMAS_FILES)
 
 compare: ## Compara recursos existentes na pasta data com os incluído no datapackage.json
 	@echo 'Comparando recursos pasta data e datapackage.json...'
-	@python /scripts/compare.py
+	@python ./scripts/compare.py
 
-clean:
-	rm -rf data/*.csv
-	rm -rf datapackage.json
+clean: # Limpa arquivos CSV e datapackage.json
+	@echo 'Limpando arquivos CSV e datapackage.json...'
+	@rm -rf data/*.csv
+	@rm -rf datapackage.json
