@@ -2,13 +2,13 @@ name: Atualização
 
 on:
   push:
-    # paths:
-    #   - 'datapackage.yaml'
-    #   - 'schemas/*'
-    #   - 'README.md'
-    #   - 'CHANGELOG.md'
-    #   - 'CONTRIBUTING.md'
-    #   - 'upload/*'
+    paths:
+      - 'datapackage.yaml'
+      - 'schemas/*'
+      - 'README.md'
+      - 'CHANGELOG.md'
+      - 'CONTRIBUTING.md'
+      - 'upload/*'
 
 jobs:
   build:
