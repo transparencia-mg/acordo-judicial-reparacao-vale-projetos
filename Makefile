@@ -31,7 +31,7 @@ $(CSV_FILES): data/%.csv : upload/%.xlsx
 	@echo Converting upload/$*.xlsx file to data/$*.csv...
 	@python ./scripts/convert_csv.py $< $@
 
-build: datapackage.json ## Build datapackage.json from datapackage.yaml
+build: datapackage.json ## Constroi arquivo datapackage.json a partir do arquivo datapackage.yaml
 
 datapackage.json: datapackage.yaml $(CSV_FILES) $(SCHEMAS_FILES)
 	@echo "Construindo datapackage.json..."
@@ -41,7 +41,7 @@ compare: ## Compara recursos existentes na pasta data com os incluído no datapa
 	@echo 'Comparando recursos pasta data e datapackage.json...'
 	@python ./scripts/compare.py
 
-clean: # Limpa arquivos CSV e datapackage.json
+clean: ## Limpa arquivos CSV e datapackage.json
 	@echo 'Limpando arquivos CSV e datapackage.json...'
 	@rm -rf data/*.csv
 	@rm -rf datapackage.json
