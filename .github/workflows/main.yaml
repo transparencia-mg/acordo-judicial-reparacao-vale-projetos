@@ -41,15 +41,13 @@ jobs:
   #       uses: frictionlessdata/repository@v1
   ckan:
     runs-on: ubuntu-latest
-    container:
-      image: gabrielbdornas/dtamg:latest
+    # container:
+    #   image: gabrielbdornas/dtamg:latest
     # needs: validate
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
       - name: Update data package to CKAN with dpckan
-      - run: sudo echo 'export USER=${{ github.actor }} | tr [:lower:] [:upper:]]' >> ~/.bash_profile
-      - run: echo $USER
         env:
           USER: ${{ github.actor }}
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
