@@ -51,14 +51,11 @@ jobs:
         uses: ASzc/change-string-case-action@v1
         with:
           string: ${{ github.actor }}
-      - run: |
-          echo "${{ steps.string.outputs.uppercase }}"
-          echo "${{ secrets[format('CKAN_KEY_{0}', steps.string.outputs.uppercase)] }}"
-      # - name: Update data package to CKAN with dpckan
-      #   env:
-      #     USER: ${{ github.actor }}
-      #     CKAN_HOST: ${{ secrets.CKAN_HOST }}
-      #     CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', env.USER)] }}
-      #   run: |
-      #     echo $USER $CKAN_KEY
-      #     dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
+      # - run: |
+      #     echo "${{ steps.string.outputs.uppercase }}"
+      #     echo "${{ secrets[format('CKAN_KEY_{0}', steps.string.outputs.uppercase)] }}"
+      - name: Update data package to CKAN with dpckan
+        env:
+          CKAN_HOST: ${{ secrets.CKAN_HOST }}
+          CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', steps.string.outputs.uppercase)] }}
+        run: dpckan --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
