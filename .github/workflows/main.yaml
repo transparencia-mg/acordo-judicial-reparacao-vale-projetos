@@ -41,8 +41,8 @@ jobs:
   #       uses: frictionlessdata/repository@v1
   ckan:
     runs-on: ubuntu-latest
-    # container:
-    #   image: gabrielbdornas/dtamg:latest
+    container:
+      image: gabrielbdornas/dtamg:latest
     # needs: validate
     # if: github.ref == 'refs/heads/main'
     steps:
