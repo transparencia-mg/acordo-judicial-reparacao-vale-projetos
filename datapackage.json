@@ -189,10 +189,10 @@
       "scheme": "file",
       "hashing": "md5",
       "stats": {
-        "hash": "a02dfebeb1e17b17d79d2101aa2aa618",
-        "bytes": 6021,
+        "hash": "233453960bc333df170b033277497930",
+        "bytes": 5815,
         "fields": 4,
-        "rows": 55
+        "rows": 53
       }
     }
   ],
