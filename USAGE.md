@@ -2,11 +2,12 @@
 
 ## 1- Criação de usuário
 
-Para o envio do conjunto de dados para o Portal de Dados Abertos do Estado de Minas Gerais - PDA/MG (https://dados.mg.gov.br/) será necessária a criação de uma conta no Github (ferramenta utilizada pela equipe da Diretoria Central de Transparência Ativa - DTA para armazenamento dos conjunto dados) e no Portal de Dados Abertos
+Para o envio do conjunto de dados para o Portal de Dados Abertos do Estado de Minas Gerais - PDA/MG (https://dados.mg.gov.br/) será necessária a criação de uma conta no Github (ferramenta utilizada pela equipe da Diretoria Central de Transparência Ativa - DTA para armazenamento dos conjunto dados) e no Portal de Dados Abertos.
 
 #### Github
 
   - Acesse o Github através do [link](https://github.com/signup?source=login) e siga os passos para a criação de uma conta.
+  - O nome do usuário deverá ser apenas letras, sem caracteres especiais e números.
   - Após criação do usuário informar a equipe da DTA os usuários para que possamos vinculá-los ao repositório.
 
 #### Portal de Dados Abertos
@@ -14,7 +15,15 @@ Para o envio do conjunto de dados para o Portal de Dados Abertos do Estado de Mi
 Preencher e enviar para a DTA o formulário de criação de usuário disponível no SEI:
 
 - Tipo de Processo: Governo Aberto, Transparência e Controle Social
-- Tipo de Documento:
+- Tipo de Documento: CGE- Cadastro de Usuário no Portal de Dados Abertos
+
+#### Identificação do usuário para atualização
+
+Para identificação do usuário responsável pela atualização dos dados no PDA/MG será necessário, uma única vez, informar o usuário responsável:
+
+- No Portal de Dados Abertos clique no nome do usuário e copie a chave da API (essa  chave é individual para cada usuário).
+- No repositório do Acordo Judicial dentro do GitHub clique em  em *Settings* e em seguida clique em *Secrets* e em *Actions*.
+- Clique em  *New repository secrets* e insira o nome do usuário no campos *Name* **CKAN_KEY_NOMEUSUARIO** e a chave da API no campo *Value* e clique em *Add secret*.
 
 
 ## 2- Atualização e validação no GitHub
@@ -32,9 +41,9 @@ Sempre que os dados forem alterados as novas informações devem ser atualizadas
 
 #### 2.2 Upload
 
-Após a atualização dos dados, acesse a sua conta do [Github](https://github.com/login) e em seguida acesse o repositório do conjunto de dados por meio do link [Repositório - acordo-judicial-reparacao-vale](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/data/raw).
+Após a atualização dos dados, acesse a sua conta do [Github](https://github.com/login) e em seguida acesse o repositório do conjunto de dados por meio do link [Repositório - acordo-judicial-reparacao-vale](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/upload).
 
-- Clique em *Add file* (Adicionar arquivo) e em seguida clique em *upload files* (upload de arquivos*);
+- Na pasta **/upload/** clique em *Add file* (Adicionar arquivo) e em seguida clique em *upload files* (upload de arquivos*);
 
 ![](static/upload.png)
 
@@ -51,45 +60,29 @@ Após a atualização dos dados, acesse a sua conta do [Github](https://github.c
 
 Após realizar o *commit* do arquivo é necessário verificar se o mesmo foi validado, ou seja, se o arquivo está de acordo com as regras de validação estabelecidas.
 
-Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/tree/main/data/raw) verifique, na barra acima do arquivo, a situação do arquivo.
+- Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale) clique em *Actions*. O campo *All workflows* irá apresentar todos os *commits* realizados no repositório.
+- Clique no *commit* desejado e verifique o fluxo de validação.
 
-1. Se aparecer um 'tique' verde o arquivo foi validado corretamente.
- ***inserir imagem***
+![](static/actions.png)
 
-![](static/correto.png)
+- Se o processo for exibido como concluído em todas as etapas, apenas verifique no Portal de Dados Abertos se os dados alterados realmente foram carregados.
 
-2. Caso apareça um *'X'* vermelho significa que existe erro na validação. Nesse caso clique no símbolo *'X'* e em seguida em *Details* para verificar o erro.
+![](static/fluxo-validacao.png)
+
+- Se aparecer algum problema durante a validação, siga os passos abaixo:
+
+  - Clique em *validate* e no link que apresenta o erro de validação;
+  - Em seguida verifique qual o erro apresentado e faça as correções necessárias.
 
 ![](static/erro.png)
 
-2.1 Clique no *link* referente ao erro e verifique a falha apresentada e faça as devidas correções.
-![](static/)
+---
 
-2.2. Faça novamente o *upload* do arquivo corrigido e repita os passos executados anteriormente.
+![](static/erro-link.png)
+
+-------
+
+![](static/erro-frictionless.png)
 
 
-## 3. Controle de alterações
-
-Após realizar o *upload* e validação do arquivo, será necessário informar quais alterações foram realizadas.
-
-1. Acesse o arquivo [CHANGELOG.md](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale/blob/main/CHANGELOG.md) e informe as alterações que foram realizadas.
-
-2. Clique na imagem do lápis (*Edit this file*) e informe as alterações realizadas.
-
-![](static/caneta.png)
-
-3. Inclua o número sequencial e data da alteração.   
- Exemplo: ### [0.0.x] - AAAA-MM-DD
-
-4. Ao finalizar as alterações digite na área *Commit changes* uma mensagem que descreva as alterações e em seguida clique em  *Commit changes*  
-Exemplo: Altera informações conforme consta na deliberação xx.
-
-![](static/botaocommit.png)
-
-__________________
-
-## 4. Atualização do arquivo no Portal de Dados Abertos
-
-Com o usuário ativo no PDA/MG será necessário, uma única vez, informar o usuário responsável pelas atualizações dos dados.
-
-1. Clique em *Security* e em seguida clique em
+* Faça novamente o *upload* do arquivo corrigido e repita os passos executados anteriormente.

@@ -1,8 +1,8 @@
 ## Controle de alterações
 
-Documentação das principais alterações sofridas por este repositório. Baseado na filosofia [Mantenha um Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
+Documentação das principais alterações. Baseado na filosofia [Mantenha um Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
-### [0.0.1] - 2022-xx-xx
+### [0.0.1] - 2022-04-06
 
 - Divulgação dos dados referentes aos recursos repassados pela Vale S.A. para cobrir os gastos com os projetos destinados a reparação dos danos causados com o rompimento da barragem.
 - Os valores refere-se aos 11,06 bilhões repassados ao Estado, bem como as alterações ocorridas por meio das deliberações do Conselho Superior do Comitê Gestor Pró-Brumadinho:
