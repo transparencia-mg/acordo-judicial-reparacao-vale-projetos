@@ -6,9 +6,9 @@ Para o envio do conjunto de dados para o Portal de Dados Abertos do Estado de Mi
 
 #### Github
 
-  - Acesse o Github através do [link](https://github.com/signup?source=login) e siga os passos para a criação de uma conta.
-  - O nome do usuário deverá ser apenas letras, sem caracteres especiais e números.
-  - Após criação do usuário informar a equipe da DTA os usuários para que possamos vinculá-los ao repositório.
+  - Acesse o Github através desse [link](https://github.com/signup?source=login) e siga os passos para a criação de uma conta.
+  - O nome do usuário deverá conter apenas letras e não poderá conter caracteres especiais e números.
+  - Após criação do usuário, informe a equipe da DTA os usuários criados para que possamos vinculá-los ao repositório do Github.
 
 #### Portal de Dados Abertos
 
@@ -17,13 +17,17 @@ Preencher e enviar para a DTA o formulário de criação de usuário disponível
 - Tipo de Processo: Governo Aberto, Transparência e Controle Social
 - Tipo de Documento: CGE- Cadastro de Usuário no Portal de Dados Abertos
 
+Após a criação dos usuários do Github e Portal de Dados Abertos, o próximo passo é vincular esse usuário para a atualização do Portal de Dados Abertos
+
 #### Identificação do usuário para atualização
 
-Para identificação do usuário responsável pela atualização dos dados no PDA/MG será necessário, uma única vez, informar o usuário responsável:
+Para identificação do usuário responsável pela atualização dos dados no PDA/MG será necessário, realizar esse procedimento uma única vez:
 
-- No Portal de Dados Abertos clique no nome do usuário e copie a chave da API (essa  chave é individual para cada usuário).
-- No repositório do Acordo Judicial dentro do GitHub clique em  em *Settings* e em seguida clique em *Secrets* e em *Actions*.
-- Clique em  *New repository secrets* e insira o nome do usuário no campos *Name* **CKAN_KEY_NOMEUSUARIO** e a chave da API no campo *Value* e clique em *Add secret*.
+- No Portal de Dados Abertos, entre com o seu login e senha.
+- Clique no nome do usuário e na tela seguinte, no canto esquerdo localize e copie a chave da API (essa chave é individual para cada usuário).
+- No repositório do Acordo Judicial dentro do GitHub clique em *Settings* e em seguida clique em *Secrets* e em *Actions*.
+- Clique em  *New repository secrets* e insira o nome do usuário no campos *Name* **CKAN_KEY_NOMEUSUARIO** (alterando o "nomeusuario" para o nome cadastrado no Portal Dados Abertos)
+- Insira a chave da API no campo *Value* e clique em *Add secret*.
 
 
 ## 2- Atualização e validação no GitHub
@@ -47,7 +51,7 @@ Após a atualização dos dados, acesse a sua conta do [Github](https://github.c
 
 ![](static/upload.png)
 
-- Arraste o arquivo ou clique em *choose your files* para selecionar o arquivo no computador o local.
+- Arraste o arquivo ou clique em *choose your files* para selecionar o arquivo no computador local.
 
 ![](static/arrastar.png)
 
@@ -86,3 +90,4 @@ Após realizar o *commit* do arquivo é necessário verificar se o mesmo foi val
 
 
 * Faça novamente o *upload* do arquivo corrigido e repita os passos executados anteriormente.
+
