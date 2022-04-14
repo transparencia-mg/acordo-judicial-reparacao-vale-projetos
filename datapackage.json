@@ -187,13 +187,7 @@
         "delimiter": ";"
       },
       "scheme": "file",
-      "hashing": "md5",
-      "stats": {
-        "hash": "f954a8c99555f772f07f69fc13dd9dab",
-        "bytes": 5770,
-        "fields": 4,
-        "rows": 52
-      }
+      "hashing": "md5"
     }
   ],
   "contributors": [

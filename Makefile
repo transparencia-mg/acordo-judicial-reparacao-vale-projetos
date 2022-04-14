@@ -35,7 +35,7 @@ build: datapackage.json ## Constroi arquivo datapackage.json a partir do arquivo
 
 datapackage.json: datapackage.yaml $(CSV_FILES) $(SCHEMAS_FILES)
 	@echo "Construindo datapackage.json..."
-	@frictionless describe --type package --stats --json $< > $@
+	@frictionless describe --type package --json $< > $@
 
 compare: ## Compara recursos existentes na pasta data com os incluído no datapackage.json
 	@echo 'Comparando recursos pasta data e datapackage.json...'
