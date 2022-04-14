@@ -17,11 +17,11 @@
         "fields": [
           {
             "name": "codigo_projeto",
-            "title": "Código Projeto",
+            "title": "Código Projeto Teste",
             "type": "integer",
             "format": "default",
             "bareNumber": true,
-            "description": "Número de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).\n",
+            "description": "Teste Número de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).\n",
             "notes": [
               "No Armazém de Dados SIAFI o campo é identificado como 'ContratoConvênio Entrada';",
               "No Armazém de Dados SIGCON- Entrada campo é identificado como 'Convênio Número Sequencial SIAFI'"
@@ -86,10 +86,10 @@
           },
           {
             "name": "projeto",
-            "title": "Projeto",
+            "title": "Projeto Teste",
             "type": "string",
             "format": "default",
-            "description": "Descrição do projeto conforme consta no Acordo Judicial de de Reparação firmado entre Estado de Minas Gerais e Vale S.A.\n",
+            "description": "Teste Descrição do projeto conforme consta no Acordo Judicial de de Reparação firmado entre Estado de Minas Gerais e Vale S.A.\n",
             "constraints": {
               "enum": [
                 "Melhoria da infraestrutura dos municípios",
