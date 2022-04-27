@@ -21,6 +21,7 @@ Após a criação dos usuários do Github e Portal de Dados Abertos, o próximo 
 
 #### Identificação do usuário para atualização
 
+Essa etapa é realizada após a equipe da DTA vincular os usuários ao repositório. 
 Para identificação do usuário responsável pela atualização dos dados no PDA/MG será necessário, realizar esse procedimento uma única vez:
 
 - No Portal de Dados Abertos, entre com o seu login e senha.
