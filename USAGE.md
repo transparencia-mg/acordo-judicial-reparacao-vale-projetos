@@ -16,6 +16,7 @@ Preencher e enviar para a DTA o formulário de criação de usuário disponível
 
 - Tipo de Processo: Governo Aberto, Transparência e Controle Social
 - Tipo de Documento: CGE- Cadastro de Usuário no Portal de Dados Abertos
+- Enviar o processo para a unidade CGE/DTA
 
 Após a criação dos usuários do Github e Portal de Dados Abertos, o próximo passo é vincular esse usuário para a atualização do Portal de Dados Abertos
 
