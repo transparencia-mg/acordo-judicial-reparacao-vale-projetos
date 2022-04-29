@@ -19,7 +19,6 @@
             "name": "codigo_projeto",
             "title": "Código Projeto",
             "format": "default",
-            "bareNumber": true,
             "description": "Número de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).\n",
             "notes": [
               "No Armazém de Dados SIAFI o campo é identificado como 'ContratoConvênio Entrada';",
