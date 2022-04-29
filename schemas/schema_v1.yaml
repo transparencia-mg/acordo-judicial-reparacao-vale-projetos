@@ -1,7 +1,7 @@
 fields:
   - name: codigo_projeto
     title: Código Projeto
-    type: integer
+    type: string
     format: default
     bareNumber: true
     description: >
