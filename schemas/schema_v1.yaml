@@ -1,7 +1,6 @@
 fields:
   - name: codigo_projeto
     title: Código Projeto
-    type: string
     format: default
     bareNumber: true
     description: >
