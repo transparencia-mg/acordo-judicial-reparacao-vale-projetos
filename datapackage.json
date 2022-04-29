@@ -18,7 +18,7 @@
           {
             "name": "codigo_projeto",
             "title": "Código Projeto",
-            "type": "integer",
+            "type": "string",
             "format": "default",
             "bareNumber": true,
             "description": "Número de identificação do Projeto no armazém SIAFI (Sistema Integrado de Administração Financeira de Minas Gerais).\n",
