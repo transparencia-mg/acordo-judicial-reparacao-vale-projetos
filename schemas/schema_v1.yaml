@@ -126,6 +126,8 @@ fields:
         - 'Implantação de Fábrica de Software para construção de sistema de governança ambiental'
         - 'Estruturação, reforma e ampliação da Fundação Ezequiel Dias – Funed'
         - 'Plano de Desenvolvimento da Cadeia Agropecuária'
+        - 'Complementação dos recursos federais para o Metrô da RMBH'
+        - 'Modernização da identificação civil e criminal - Digitalização do acervo de fichas datiloscópicas e cartões onomásticos'
   - name: anexo
     title: Anexo do Acordo
     type: string
