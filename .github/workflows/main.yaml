@@ -60,4 +60,4 @@ jobs:
         env:
           CKAN_HOST: ${{ secrets.CKAN_HOST }}
           CKAN_KEY: ${{ secrets[format('CKAN_KEY_{0}', steps.string.outputs.uppercase)] }}
-        run: dpckan --datastore --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
+        run: dpckan --datastore --exit-code --ckan-host "$CKAN_HOST" --ckan-key "$CKAN_KEY" dataset update
