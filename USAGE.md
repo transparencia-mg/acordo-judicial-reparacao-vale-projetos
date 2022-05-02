@@ -68,7 +68,7 @@ Após a atualização dos dados, acesse a sua conta do [Github](https://github.c
 Após realizar o *commit* do arquivo é necessário verificar se o mesmo foi validado, ou seja, se o arquivo está de acordo com as regras de validação estabelecidas.
 
 - Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale) clique em *Actions*. O campo *All workflows* irá apresentar todos os *commits* realizados no repositório.
-- Clique no *commit* desejado e verifique o fluxo de validação.
+- Clique no *commit* desejado e verifique o fluxo de validação. Caso o *commit* desejado não esteja presente no campo *All workflows* algum problema aconteceu com o upload do arquivo.
 
 ![](static/actions.png)
 
