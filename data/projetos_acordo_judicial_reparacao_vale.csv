@@ -1,5 +1,7 @@
 ﻿codigo_projeto;projeto;anexo;valor_projeto
 9288130;Recuperação de rodovias pavimentadas em pior estado, conforme avaliação técnica do DER-MG / conclusão de corredor logístico estruturante, conforme critérios técnicos da Seinfra / melhoria da infraestrutura dos municípios;III;450000000,0
+9288130;Melhoria da infraestrutura dos municípios;IV;1107550000,0
+9288132;Construção de pontes em São Francisco, Manga e São Romão sobre o Rio São Francisco;III;300000000,0
 9288133;Recuperação de rodovias pavimentadas em pior estado, conforme avaliação técnica do DER-MG/conclusão de corredor logístico estruturante, conforme critérios técnicos da SEINFRA;III;700000000,0
 9288134;Realização de obras rodoviárias - Caeté - Barão de Cocais e Contorno de Barão de Cocais;IV;98860000,0
 9288135;Implantação do Sistema de Informações Regulatórias da ARSAE-MG;IV;1345000,0
@@ -25,12 +27,10 @@
 9288169;Execução de obras e serviços de engenharia em várias unidades do CBMMG;IV;43368482,0
 9288176;Reestruturação logística, tecnológica e de cobrança da dívida ativa da AGE;IV;23131467,96
 9288177;Melhoria da infraestrutura dos municípios - Outros repasses;IV;100370000,0
-9288177;Melhoria da infraestrutura dos municípios;IV;1107550000,0
 9288178;Prevenção de Enchentes - Construção de Bacias de Contenção no Córrego Ferrugem;IV;253000000,0
 9288179;Prevenção de Enchentes - Desapropriação para construção de bacias de contenção no Córrego Riacho das Pedras.;IV;45000000,0
 9288180;Implantação do Rodoanel da Região Metropolitana de Belo Horizonte;III;3072030000,0
 9288181;Reintegração social e humanização do sistema prisional;IV;75352000,0
-9288182;Construção de pontes em São Francisco, Manga e São Romão sobre o Rio São Francisco;III;300000000,0
 9288182;Ampliação de postos de abastecimento próprios do Estado;IV;7000000,0
 9288183;Melhoria da estrutura logística e energética da Cidade Administrativa para redução de custos;IV;8000000,0
 9288185;Elaboração de Plano Metropolitano de Segurança Hídrica para a Região Metropolitana de Belo Horizonte.;IV;2000000,0
@@ -49,9 +49,8 @@
 9288209;Estudo de viabilidade técnica e financeira e modelo de gestão da reestruturação da Fundação Ezequiel Dias – Funed;IV;1200000,0
 9288210;Elaboração de instrumentos de gestão para desenvolvimento de mineração sustentável e competitiva - Avaliação Ambiental Estratégica;IV;2500000,0
 9288211;Elaboração de instrumentos de gestão para desenvolvimento de mineração sustentável e competitiva - Elaboração do Plano Estadual da Mineração de Minas Gerais;IV;3200000,0
-9288212;Intervenções e Obras a serem realizadas, sob a responsabilidade e de propriedade do Estado de Minas Gerais, com o objetivo de aumentar a resiliência das Bacias do Paraopeba e Rio das Velhas, de modo a garantir o abastecimento da Região Metropolitana de Belo Horizonte - RMBH.;II.3;2050000000,0
+9288212;Intervenções e Obras a serem realizadas, sob a responsabilidade e de propriedade do Estado de Minas Gerais, com o objetivo de aumentar a resiliência das Bacias do Paraopeba e Rio das Velhas, de modo a garantir o abastecimento da Região Metropolitana de Belo Horizonte - RMBH;II.3;2050000000,0
 9288213;Implantação de Fábrica de Software para construção de sistema de governança ambiental;IV;23000005,0
 9288214;Estruturação, reforma e ampliação da Fundação Ezequiel Dias – Funed;IV;199489167,000002
 9321270;Plano de Desenvolvimento da Cadeia Agropecuária;IV;800000,0
-9288214;Complementação dos recursos federais para o Metrô da RMBH;III;427970000,0
-9321270;Modernização da identificação civil e criminal - Digitalização do acervo de fichas datiloscópicas e cartões onomásticos;IV;14000000,0
+9334530;Modernização da identificação civil e criminal - Digitalização do acervo de fichas datiloscópicas e cartões onomásticos;IV;14000000,0
