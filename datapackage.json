@@ -24,6 +24,9 @@
               "No Armazém de Dados SIAFI o campo é identificado como 'ContratoConvênio Entrada';",
               "No Armazém de Dados SIGCON- Entrada campo é identificado como 'Convênio Número Sequencial SIAFI'"
             ],
+            "missingValues": [
+              "9999999"
+            ],
             "constraints": {
               "enum": [
                 "9288130",
@@ -79,8 +82,7 @@
                 "9288213",
                 "9288214",
                 "9321270",
-                "9334530",
-                "9999999"
+                "9334530"
               ]
             }
           },
