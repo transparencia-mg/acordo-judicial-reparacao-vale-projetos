@@ -2,6 +2,11 @@
 
 Documentação das principais alterações. Baseado na filosofia [Mantenha um Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+
+### [0.0.2] - 2022-05-19
+
+  - [Deliberação 06](https://www.mg.gov.br/sites/default/files/paginas/imagens/probrumadinho/Deliberacao%2006%20CS14_04_22.pdf), publicada em 14 de abril de 2022, contendo atualização de valores dos projetos.
+
 ### [0.0.1] - 2022-04-06
 
 - Divulgação dos dados referentes aos recursos repassados pela Vale S.A. para cobrir os gastos com os projetos destinados a reparação dos danos causados com o rompimento da barragem.
