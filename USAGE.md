@@ -23,13 +23,13 @@ Após a criação dos usuários do Github e Portal de Dados Abertos, o próximo 
 
 #### Identificação do usuário para atualização
 
-Essa etapa é realizada após a equipe da DTA vincular os usuários ao repositório. 
+Essa etapa é realizada após a equipe da DTA vincular os usuários ao repositório.
 Para identificação do usuário responsável pela atualização dos dados no PDA/MG será necessário, realizar esse procedimento uma única vez:
 
 - No Portal de Dados Abertos, entre com o seu login e senha.
 - Clique no nome do usuário e na tela seguinte, no canto esquerdo localize e copie a chave da API (essa chave é individual para cada usuário).
 - No repositório do Acordo Judicial dentro do GitHub clique em *Settings* e em seguida clique em *Secrets* e em *Actions*.
-- Clique em  *New repository secrets* e insira o nome do usuário no campos *Name* **CKAN_KEY_NOMEUSUARIO** (alterando o "nomeusuario" para o nome cadastrado no Portal Dados Abertos)
+- Clique em  *New repository secrets* e insira o nome do usuário no campos *Name* **CKAN_KEY_NOMEUSUARIO** (alterando o "nomeusuario" para o nome cadastrado no GitHub)
 - Insira a chave da API no campo *Value* e clique em *Add secret*.
 
 
@@ -67,6 +67,8 @@ Após a atualização dos dados, acesse a sua conta do [Github](https://github.c
 
 Após realizar o *commit* do arquivo é necessário verificar se o mesmo foi validado, ou seja, se o arquivo está de acordo com as regras de validação estabelecidas.
 
+Caso **não seja realizado nenhuma alteração** do arquivo carregado o fluxo de validação não será iniciado, pois o sistema irá considerar a mesma *hash*.
+
 - Na página do [Repositório](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale) clique em *Actions*. O campo *All workflows* irá apresentar todos os *commits* realizados no repositório.
 - Clique no *commit* desejado e verifique o fluxo de validação.
 
@@ -93,4 +95,3 @@ Após realizar o *commit* do arquivo é necessário verificar se o mesmo foi val
 
 
 * Faça novamente o *upload* do arquivo corrigido e repita os passos executados anteriormente.
-
