@@ -2,6 +2,10 @@
 
 Documentação das principais alterações. Baseado na filosofia [Mantenha um Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+### [0.0.3] - 2022-06-23
+
+- [Deliberação 08](https://www.mg.gov.br/sites/default/files/paginas/arquivos%20probrumadinho/Delibera%C3%A7%C3%A3o%20008.2022%20-%20Estradas%20da%20Bacia%20-%20IOF.pdf),publicada em 15 de junho de 2022, contendo atualização de valores dos projetos.
+- [Deliberação 07](https://www.mg.gov.br/sites/default/files/paginas/imagens/probrumadinho/Delibera%C3%A7%C3%A3o%20007.2022%20-%20IOF..pdf), publicada em 31 de maio de 2022, contendo atualização de valores dos projetos.
 
 ### [0.0.2] - 2022-05-19
 
