@@ -64,6 +64,9 @@ fields:
       - '9288214'
       - '9321270'
       - '9334530'
+      - '9337957'
+      - '9341846'
+      - '9999999'
   - name: projeto
     title: Projeto
     type: string
@@ -128,6 +131,9 @@ fields:
         - 'Plano de Desenvolvimento da Cadeia Agropecuária'
         - 'Complementação dos recursos federais para o Metrô da RMBH'
         - 'Modernização da identificação civil e criminal - Digitalização do acervo de fichas datiloscópicas e cartões onomásticos'
+        - 'Ampliação da capacidade de cobertura da malha aérea da Polícia Militar de Minas Gerais'
+        - 'Melhoria da infraestrutura dos municípios - Mobilidade regional na Bacia do Paraopeba'
+        - 'Recuperação de rodovias pavimentadas em pior estado, conforme avaliação técnica do DER-MG / conclusão de corredor logístico estruturante, conforme critérios técnicos da Seinfra - Mobilidade regional na Bacia do Paraopeba'
   - name: anexo
     title: Anexo do Acordo
     type: string
