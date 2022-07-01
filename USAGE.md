@@ -24,7 +24,7 @@ Após a criação dos usuários do Github e Portal de Dados Abertos, o próximo 
 #### Identificação do usuário para atualização
 
 Essa etapa é realizada após a equipe da DTA vincular os usuários ao repositório.
-Para identificação do usuário responsável pela atualização dos dados no PDA/MG será necessário, realizar esse procedimento uma única vez:
+Para identificação do usuário responsável pela atualização dos dados no PDA/MG será necessário, realizar esse procedimento **uma única vez**:
 
 - No Portal de Dados Abertos, entre com o seu login e senha.
 - Clique no nome do usuário e na tela seguinte, no canto esquerdo localize e copie a chave da API (essa chave é individual para cada usuário).
@@ -95,3 +95,39 @@ Caso **não seja realizado nenhuma alteração** do arquivo carregado o fluxo de
 
 
 * Faça novamente o *upload* do arquivo corrigido e repita os passos executados anteriormente.
+
+## 4. Controle de Alterações (Changelog)
+
+Um changelog é um arquivo que contém uma lista selecionada, ordenada cronologicamente, de mudanças significativas para cada versão de um projeto.
+
+Para facilitar que usuários e contribuidores vejam precisamente quais mudanças significativas foram realizadas entre cada versão publicada de um projeto é necessário que todas as alterações relevenantes sejam documentadas.
+
+* Acesse o arquivo [CHANGELOG.md](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale-projetos/blob/main/CHANGELOG.md);
+* Clique em *Edit this file*;
+* Indique o número correspondente e a data em que o arquivo .xlsx foi atualizado;
+  - [x.x.x] - AAAA-MM-DD e
+  - Descrição da alteração.
+
+
+* Após as informações serem inseridas digite na área *Commit changes* uma mensagem curta e significativa que descreva a alteração feita no arquivo e clique no botão verde *Commit changes*.
+
+***Nota***: Para acrescentar um link em algum texto coloque entre colchetes o  [TEXTO] e o link entre parênteses(LINK).
+  * **Exemplo**: '[texto] (link)', não deve haver espaço entre o último colchete eo primeiro parêntese.
+
+![](static/controle-alteracoes.gif)
+
+
+## 5. Acrescentar novos projetos
+
+Caso alguma deliberação crie ou altere o código ou descrição de algum projeto é necessário que essa alteração seja refletida no *enum* da tabela correspondente dentro do arquivo *Schema*. Os valores dentro do *enum*  devem corresponder exatamente a um valor na tabela matriz.
+
+**Exemplo**:
+O *enum* da tabela codigo_projeto é representado pelos códigos dos projetos. Caso o arquivo .xlsx contenha algum código de projeto não listado no *enum* da tabela ocorrerá erro no momento da validação.
+
+* Clique em *Schema >> [schema_v1.yaml](https://github.com/transparencia-mg/acordo-judicial-reparacao-vale-projetos/blob/main/schemas/schema_v1.yaml)*;
+* Para editar os dados clique em *Edit this file* e localize a tabela que deseja alterar;
+* Insira a alteração obedecendo a mesma formatação utilizada;
+* Após as informações serem inseridas digite na área *Commit changes* uma mensagem curta e significativa que descreva a alteração feita no arquivo e clique no botão verde *Commit changes*.
+
+
+![](static/altera-schema.gif)
