@@ -5,7 +5,7 @@ Documentação das principais alterações. Baseado na filosofia [Mantenha um Ch
 ### [0.0.4] - 2022-07-05
 
 - [Deliberação 08](https://www.mg.gov.br/sites/default/files/paginas/arquivos%20probrumadinho/Delibera%C3%A7%C3%A3o%20008.2022%20-%20Estradas%20da%20Bacia%20-%20IOF.pdf), publicada em 10 de junho de 2022, contém inclusão de número de instrumento dos novos projetos.
-- 
+
 ### [0.0.3] - 2022-06-23
 
 - [Deliberação 08](https://www.mg.gov.br/sites/default/files/paginas/arquivos%20probrumadinho/Delibera%C3%A7%C3%A3o%20008.2022%20-%20Estradas%20da%20Bacia%20-%20IOF.pdf), publicada em 10 de junho de 2022, contendo inclusão de novos projetos.
