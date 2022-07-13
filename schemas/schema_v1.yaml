@@ -10,6 +10,7 @@ fields:
     missingValues: ["9999999"]
     constraints:
      enum:
+      - '9999999'
       - '9288130'
       - '9288132'
       - '9288133'
